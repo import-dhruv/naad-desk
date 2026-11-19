@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from datetime import timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -14,10 +15,19 @@ from ..schemas.calls import CallCreate, CallSummary
 router = APIRouter()
 
 
-def _duration(call: m.Call) -> float | None:
-    if not call.ended_at:
+def _utc(value):
+    """Normalise DB datetimes (naive on some drivers) to aware UTC."""
+    if value is None:
         return None
-    return (call.ended_at - call.started_at).total_seconds()
+    if value.tzinfo is None:
+        return value.replace(tzinfo=timezone.utc)
+    return value.astimezone(timezone.utc)
+
+
+def _duration(call: m.Call) -> float | None:
+    if not call.ended_at or not call.started_at:
+        return None
+    return (_utc(call.ended_at) - _utc(call.started_at)).total_seconds()
 
 
 @router.post("/api/calls", response_model=dict)

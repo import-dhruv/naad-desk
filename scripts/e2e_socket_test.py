@@ -7,12 +7,13 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 
 from websockets.asyncio.client import connect
 
 
 async def main() -> None:
-    url = "ws://127.0.0.1:8100/ws/call"
+    url = os.getenv("NAAD_GATEWAY_WS", "ws://127.0.0.1:8100/ws/call")
     async with connect(url, open_timeout=10) as ws:
         await ws.send(json.dumps({"v": 1, "type": "start", "language": "hi",
                                   "disclosure_ack": True}))
