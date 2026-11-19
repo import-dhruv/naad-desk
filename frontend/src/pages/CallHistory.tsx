@@ -29,11 +29,11 @@ export function CallHistory() {
           {langs.map((l) => <Pill key={l} active={lang === l} onClick={() => setLang(l)}>{l}</Pill>)}
         </div>
         {rows.length === 0 ? <Empty text="No calls match these filters." /> : (
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Call ID</th><th>Date</th><th>Language</th><th>Duration</th><th>Outcome</th><th>QA score</th><th>API cost</th></tr></thead>
             <tbody>{rows.map((c) => (
               <tr key={c.id} className="hover:bg-white/[0.03]">
-                <td className="font-mono text-xs"><Link className="text-cyan-300 hover:underline" to={`/calls/${c.id}`}>{c.id}</Link></td>
+                <td className="whitespace-nowrap font-mono text-xs"><Link className="text-cyan-300 hover:underline" to={`/calls/${c.id}`}>{c.id}</Link></td>
                 <td className="text-xs">{new Date(c.started_at).toLocaleString()}</td>
                 <td>{c.language}</td>
                 <td className="font-mono">{c.duration_seconds ? `${Math.round(c.duration_seconds)}s` : '—'}</td>
@@ -42,7 +42,7 @@ export function CallHistory() {
                 <td className="font-mono">₹{(c.cost_paise / 100).toFixed(2)}</td>
               </tr>
             ))}</tbody>
-          </table>
+          </table></div>
         )}
       </Card>
     </>

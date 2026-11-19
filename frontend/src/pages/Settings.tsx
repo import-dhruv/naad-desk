@@ -28,7 +28,7 @@ export function Settings() {
       <PageHeader title="Settings" description="Runtime configuration. Secrets are never exposed to the browser." />
       <div className="grid gap-4 xl:grid-cols-2">
         <Card title="Runtime configuration">
-          <table className="table"><tbody>{rows.map(([k, v]) => <tr key={k}><td className="text-slate-500">{k}</td><td className="font-mono text-slate-300">{v}</td></tr>)}</tbody></table>
+          <div className="table-wrap"><table className="table"><tbody>{rows.map(([k, v]) => <tr key={k}><td className="text-slate-500">{k}</td><td className="font-mono text-slate-300">{v}</td></tr>)}</tbody></table></div>
         </Card>
         <Card title="Security & reliability">
           <ul className="space-y-2 text-sm text-slate-400">

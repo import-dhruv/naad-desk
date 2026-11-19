@@ -58,9 +58,9 @@ export function EvaluationLab() {
 
       <Card title="Experiment runs" className="mt-4" subtitle={`${runs.length} stored runs`}>
         {runs.length === 0 ? <Empty text="No experiment runs stored." /> : (
-          <table className="table"><thead><tr><th>ID</th><th>Kind</th><th>Started</th><th>Samples</th><th>Git SHA</th><th>Metrics</th></tr></thead>
+          <div className="table-wrap"><table className="table"><thead><tr><th>ID</th><th>Kind</th><th>Started</th><th>Samples</th><th>Git SHA</th><th>Metrics</th></tr></thead>
             <tbody>{runs.map((r) => <tr key={r.id}><td className="font-mono text-xs text-cyan-300">{r.id}</td><td>{r.kind}</td><td className="text-xs">{r.started_at ? new Date(r.started_at).toLocaleString() : '—'}</td><td>{r.sample_count}</td><td className="font-mono text-xs">{r.git_sha}</td><td className="text-xs">{JSON.stringify(r.metrics).slice(0, 90)}</td></tr>)}</tbody>
-          </table>
+          </table></div>
         )}
       </Card>
     </>

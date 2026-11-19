@@ -77,9 +77,9 @@ export function CallDetail() {
         ))}</Card>
 
         <Card title="Latency waterfall" className="xl:col-span-2">{call.turns.length === 0 ? <Empty text="No timing data." /> : (
-          <table className="table"><thead><tr><th>Turn</th><th>Speaker</th>{Object.keys(call.turns[0].timings || {}).map((k) => <th key={k}>{k.replace('t_', '')}</th>)}</tr></thead>
+          <div className="table-wrap"><table className="table"><thead><tr><th>Turn</th><th>Speaker</th>{Object.keys(call.turns[0].timings || {}).map((k) => <th key={k}>{k.replace('t_', '')}</th>)}</tr></thead>
             <tbody>{call.turns.map((t) => <tr key={t.idx}><td>{t.idx}</td><td>{t.speaker}</td>{Object.keys(call.turns[0].timings || {}).map((k) => <td key={k} className="font-mono">{t.timings?.[k] ?? '—'}</td>)}</tr>)}</tbody>
-          </table>
+          </table></div>
         )}</Card>
       </div>
     </>
