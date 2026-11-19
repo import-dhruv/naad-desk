@@ -7,6 +7,7 @@ labelled estimate from published rates is used.
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import time
 from typing import Any
@@ -114,7 +115,15 @@ class OogamClient:
     async def _post(self, path: str, *, call_id: str | None = None, **kwargs) -> httpx.Response:
         spend_guard.check()
         start = time.perf_counter()
-        response = await (await self._http()).post(path, **kwargs)
+        response = None
+        for attempt, backoff in enumerate((0, 1, 2)):
+            if backoff:
+                await asyncio.sleep(backoff)
+            response = await (await self._http()).post(path, **kwargs)
+            if response.status_code not in (502, 503, 504) or attempt == 2:
+                break
+            log.warning("upstream_retry", extra={"endpoint": path, "status": response.status_code,
+                                                  "attempt": attempt + 1, "call_id": call_id})
         latency = round((time.perf_counter() - start) * 1000, 2)
         headers = _naad_headers(response)
         _log_api(call_id, path, response.status_code, headers, latency, 0)
