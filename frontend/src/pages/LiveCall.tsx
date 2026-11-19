@@ -22,6 +22,9 @@ export function LiveCall() {
   const [elapsed, setElapsed] = useState(0)
   const [error, setError] = useState('')
   const [micOn, setMicOn] = useState(true)
+  // Ref mirrors the state so the long-lived AudioWorklet callback always sees
+  // the current mute value instead of the one captured when start() ran.
+  const micOnRef = useRef(true)
   const [config, setConfig] = useState<any>(null)
 
   const socket = useRef<CallSocket | null>(null)
@@ -89,7 +92,7 @@ export function LiveCall() {
       await sock.connect(language)
       socket.current = sock
       const cap = new AudioCapture((pcm) => {
-        if (socket.current && micOn) socket.current.send({ v: 1, type: 'audio', data: pcm16ToBase64(pcm), seq: seq.current++ })
+        if (socket.current && micOnRef.current) socket.current.send({ v: 1, type: 'audio', data: pcm16ToBase64(pcm), seq: seq.current++ })
       })
       await cap.start()
       capture.current = cap
@@ -152,7 +155,10 @@ export function LiveCall() {
               <div ref={captionEnd} />
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <button className={micOn ? 'btn-ghost' : 'btn-danger'} onClick={() => setMicOn((m) => !m)}>
+              <button className={micOn ? 'btn-ghost' : 'btn-danger'} onClick={() => setMicOn((m) => {
+                micOnRef.current = !m
+                return !m
+              })}>
                 {micOn ? <Mic size={14} /> : <MicOff size={14} />}{micOn ? 'Mic on' : 'Mic muted'}
               </button>
               <form className="flex flex-1 gap-2" onSubmit={(e) => { e.preventDefault(); const input = e.currentTarget.elements.namedItem('text') as HTMLInputElement; sendText(input.value); input.value = '' }}>
