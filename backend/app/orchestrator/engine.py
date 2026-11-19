@@ -61,6 +61,13 @@ async def process_turn(db: Session, retriever: HybridRetriever, state: Conversat
     state.add_turn("caller", transcript, result.language)
     state.current_stage = "planning"
 
+    # Persist the caller turn as well as the agent turn (PRD §13). Done here so
+    # every early-return path (guardrails, errors) still leaves an audit trail.
+    from ..db.models import Turn as TurnRow
+    db.add(TurnRow(call_id=call_id, idx=state.turn_index, speaker="caller",
+                   text=transcript, language=result.language))
+    db.commit()
+
     # --- Guardrails: caller input is untrusted. ---
     guard = guardrails.guard(transcript, result.language, source="caller")
     if guard.action == "emergency":
@@ -147,6 +154,7 @@ async def process_turn(db: Session, retriever: HybridRetriever, state: Conversat
         plan.needs_confirmation = False
 
     # Resolve natural-language dates to ISO before any tool sees them (§8.5).
+    date_ambiguous = False
     for key in ("date", "new_date"):
         value = tool_args.get(key)
         if value and not _is_iso_date(value):
@@ -156,12 +164,16 @@ async def process_turn(db: Session, retriever: HybridRetriever, state: Conversat
             else:
                 tool_args.pop(key, None)
                 if resolution.ambiguous:
+                    date_ambiguous = True
                     plan.clarification = plan.clarification or (
-                        "कृपया स्पष्ट तारीख़ बताएँ।" if result.language == "hi"
-                        else "Please specify the exact date."
+                        "कृपया स्पष्ट तारीख़ बताएँ — इस शुक्रवार की या अगले शुक्रवार की?"
+                        if result.language == "hi" else "Please specify the exact date."
                     )
 
-    # --- Tool execution. ---
+    # --- Tool execution. Skip commits when a date is ambiguous (§8.5). ---
+    if date_ambiguous:
+        requested_tool = None
+
     if requested_tool:
         tool_start = time.perf_counter()
         tool_result = execute_tool(requested_tool, tool_args, db, call_id,
@@ -235,6 +247,7 @@ def _finalize(result: TurnResult, state: ConversationState, t0: float, db: Sessi
     from ..db.models import Retrieval as RetrievalRow
     from ..db.models import ToolCall, Turn
 
+    state.turn_index += 1  # caller already used the previous index
     turn = Turn(call_id=state.call_id, idx=state.turn_index, speaker="agent",
                 text=result.caption, language=result.language,
                 t_retrieval=result.timings.get("retrieval_ms"),

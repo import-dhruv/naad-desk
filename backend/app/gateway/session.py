@@ -107,6 +107,11 @@ class CallSession:
                     if etype == "state":
                         await self.emit("state", {"value": event.data.get("value")})
                     elif etype == "stt":
+                        # The engine can emit partial STT updates (final:false /
+                        # replace:true). Only endpointed transcripts may trigger
+                        # a full Sutra + retrieval + say cycle.
+                        if event.data.get("final") is False:
+                            continue
                         text = event.data.get("text") or event.data.get("transcript", "")
                         if text and not self._busy and text != getattr(self, "_last_stt", ""):
                             self._last_stt = text
