@@ -22,7 +22,7 @@ export function Findings() {
         action={<a className="btn-ghost" href={api.exportFindings()} target="_blank" rel="noreferrer">Export Markdown</a>} />
       <div className="mb-4 flex flex-wrap gap-2">
         {['all', 'high', 'medium', 'low', 'suggestion'].map((s) => <Pill key={s} active={severity === s} onClick={() => setSeverity(s)}>{s}</Pill>)}
-        <input className="input ml-auto max-w-xs" placeholder="Search…" value={q} onChange={(e) => setQ(e.target.value)} />
+        <input className="input w-full sm:ml-auto sm:w-auto sm:max-w-xs" placeholder="Search…" value={q} onChange={(e) => setQ(e.target.value)} />
       </div>
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
         <Card title={`${rows.length} findings`}>

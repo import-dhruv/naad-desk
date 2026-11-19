@@ -34,9 +34,9 @@ export function KnowledgeBase() {
       <div className="mb-4 flex gap-2">{['all', 'en', 'hi', 'gu'].map((l) => <Pill key={l} active={lang === l} onClick={() => setLang(l)}>{l}</Pill>)}</div>
       <Card>
         {rows.length === 0 ? <Empty text="No documents indexed. Run re-index." /> : (
-          <table className="table"><thead><tr><th>Document</th><th>Language</th><th>Characters</th><th>Chunks</th><th>Status</th><th>Indexed</th></tr></thead>
+          <div className="table-wrap"><table className="table"><thead><tr><th>Document</th><th>Language</th><th>Characters</th><th>Chunks</th><th>Status</th><th>Indexed</th></tr></thead>
             <tbody>{rows.map((d) => <tr key={d.id}><td className="font-mono text-xs text-slate-300">{d.id}</td><td>{d.language}</td><td className="font-mono">{d.char_count.toLocaleString()}</td><td className="font-mono">{d.chunk_count}</td><td><Status value={d.status} /></td><td className="text-xs">{d.indexed_at ? new Date(d.indexed_at).toLocaleString() : '—'}</td></tr>)}</tbody>
-          </table>
+          </table></div>
         )}
       </Card>
       <Card title="Retrieval pipeline" className="mt-4" subtitle="Hybrid BM25 + dense embeddings fused with Reciprocal Rank Fusion">

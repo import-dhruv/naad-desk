@@ -30,6 +30,10 @@ body {
   .table td { @apply border-b border-white/5 px-3 py-2.5 text-slate-300; }
 }
 
+/* Tables keep their density on desktop but scroll horizontally on phones. */
+.table-wrap { @apply w-full max-w-full -mx-1 overflow-x-auto px-1; }
+.table-wrap .table { @apply min-w-[560px]; }
+
 .scroll-thin::-webkit-scrollbar { width: 8px; height: 8px; }
 .scroll-thin::-webkit-scrollbar-thumb { background: #1e2a36; border-radius: 4px; }
 .scroll-thin::-webkit-scrollbar-track { background: transparent; }

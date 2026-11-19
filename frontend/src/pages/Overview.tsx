@@ -61,7 +61,7 @@ export function Overview() {
       <div className="mt-4 grid gap-4 lg:grid-cols-3">
         <Card title="Recent calls" subtitle="Most recent sessions" className="lg:col-span-2">
           {calls.length === 0 ? <Empty text="No calls recorded yet. Start a live call to populate this view." /> : (
-            <table className="table">
+            <div className="table-wrap"><table className="table">
               <thead><tr><th>Call</th><th>Language</th><th>Duration</th><th>Outcome</th><th>QA</th></tr></thead>
               <tbody>{calls.slice(0, 8).map((c) => (
                 <tr key={c.id}>
@@ -72,12 +72,12 @@ export function Overview() {
                   <td>{c.qa_score ?? '—'}</td>
                 </tr>
               ))}</tbody>
-            </table>
+            </table></div>
           )}
         </Card>
         <Card title="Language distribution" subtitle="Across recorded calls">
           {langData.length === 0 ? <Empty text="No language data yet." /> : (
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
               <div className="h-40 w-40">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart><Pie data={langData} dataKey="value" nameKey="name" innerRadius={40} outerRadius={65}>

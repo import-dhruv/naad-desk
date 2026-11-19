@@ -142,7 +142,7 @@ export function LiveCall() {
               ))}
               <span className="ml-auto font-mono text-xs text-slate-500">{mmss(elapsed)}</span>
             </div>
-            <div className="scroll-thin h-[420px] space-y-3 overflow-y-auto rounded border border-white/5 bg-ink-950/50 p-3">
+            <div className="scroll-thin h-[320px] space-y-3 overflow-y-auto rounded border border-white/5 bg-ink-950/50 p-3 sm:h-[420px]">
               {captions.length === 0 && <Empty text="Press Start call to begin. A recording disclosure is spoken and shown automatically." />}
               {captions.map((c) => (
                 <div key={c.id} className={`flex ${c.speaker === 'caller' ? 'justify-end' : 'justify-start'}`}>
@@ -154,8 +154,8 @@ export function LiveCall() {
               ))}
               <div ref={captionEnd} />
             </div>
-            <div className="mt-3 flex items-center gap-2">
-              <button className={micOn ? 'btn-ghost' : 'btn-danger'} onClick={() => setMicOn((m) => {
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
+              <button className={`${micOn ? 'btn-ghost' : 'btn-danger'} shrink-0`} onClick={() => setMicOn((m) => {
                 micOnRef.current = !m
                 return !m
               })}>
