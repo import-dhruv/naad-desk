@@ -37,17 +37,34 @@ async def analyze_call(db: Session, call_id: str) -> dict:
         return {"error": "no_recordings", "call_id": call_id,
                 "qa": None, "summary": "", "merged_turns": []}
 
-    caller = await transcribe_channel(RECORDINGS / call_id / "caller.wav", call.language,
-                                      call_id, refs.get("caller"))
-    agent = await transcribe_channel(RECORDINGS / call_id / "agent.wav", call.language,
-                                     call_id, refs.get("agent"))
-    merged_turns = merge_transcripts(caller, agent)
-    merged_text = render(merged_turns)
+    turns = db.query(Turn).filter(Turn.call_id == call_id).order_by(Turn.idx).all()
+    try:
+        caller = await transcribe_channel(RECORDINGS / call_id / "caller.wav", call.language,
+                                          call_id, refs.get("caller"))
+        agent = await transcribe_channel(RECORDINGS / call_id / "agent.wav", call.language,
+                                         call_id, refs.get("agent"))
+        merged_turns = merge_transcripts(caller, agent)
+        merged_text = render(merged_turns)
+        transcript_source = "batch_stt"
+    except Exception as exc:
+        # Batch STT can fail (upstream 502 on some networks). Realtime transcripts
+        # are already persisted in `turns` — use them rather than returning 500.
+        log.warning("batch_stt_fallback", extra={"call_id": call_id, "error": str(exc)})
+        caller_text = " ".join(t.text for t in turns if t.speaker == "caller")
+        agent_text = " ".join(t.text for t in turns if t.speaker == "agent")
+        caller = {"text": caller_text, "segments": []}
+        agent = {"text": agent_text, "segments": []}
+        merged_turns = [
+            {"idx": i, "speaker": t.speaker, "start": 0, "end": 0,
+             "text": t.text, "timing_quality": "realtime_event"}
+            for i, t in enumerate(turns)
+        ]
+        merged_text = render(merged_turns)
+        transcript_source = "realtime_turns_fallback"
 
     extraction_model = await extract(merged_text or call_id, call_id)
     extraction = extraction_model.model_dump()
-
-    turns = db.query(Turn).filter(Turn.call_id == call_id).order_by(Turn.idx).all()
+    extraction["_transcript_source"] = transcript_source
     agent_text = " ".join(t.text for t in turns if t.speaker == "agent") or agent.get("text", "")
     retrievals = db.query(RetrievalRow).join(Turn).filter(Turn.call_id == call_id).all()
     confs = [r.confidence for r in retrievals]
