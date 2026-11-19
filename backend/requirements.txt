@@ -21,3 +21,6 @@ ruff>=0.5
 
 # PostgreSQL driver for Vercel/Neon deployment
 psycopg[binary]>=3.1
+
+# Vercel Blob SDK for durable recordings on Vercel
+vercel-blob>=0.5

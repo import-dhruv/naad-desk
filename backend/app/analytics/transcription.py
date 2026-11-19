@@ -12,10 +12,17 @@ from ..gateway.oogam_client import oogam
 STT_CODES = {"hi": "HIN", "gu": "GUJ", "en-in": "ENG"}
 
 
-async def transcribe_channel(path: Path, language: str, call_id: str) -> dict:
-    if not path.exists():
+async def transcribe_channel(path: Path, language: str, call_id: str,
+                             blob_reference: str | None = None) -> dict:
+    audio: bytes | None = None
+    if blob_reference:
+        from ..gateway.blob_store import download_recording
+        audio = await download_recording(blob_reference)
+    if audio is None and path.exists():
+        audio = path.read_bytes()
+    if audio is None:
         return {"text": "", "segments": [], "estimated_timestamps": True, "missing": True}
-    result = await oogam.stt(path.read_bytes(), STT_CODES.get(language, "HIN"),
+    result = await oogam.stt(audio, STT_CODES.get(language, "HIN"),
                              verbose=True, call_id=call_id)
     segments = []
     for seg in result.get("segments", []):

@@ -28,14 +28,19 @@ async def analyze_call(db: Session, call_id: str) -> dict:
     if call is None:
         return {"error": "call not found"}
 
-    if not ((RECORDINGS / call_id / "caller.wav").exists()
-            and (RECORDINGS / call_id / "agent.wav").exists()):
+    from ..gateway.blob_store import recording_refs
+    refs = recording_refs(call.metadata_json)
+    has_files = ((RECORDINGS / call_id / "caller.wav").exists()
+                 and (RECORDINGS / call_id / "agent.wav").exists())
+    if not has_files and not (refs.get("caller") and refs.get("agent")):
         log.info("analysis_skipped_no_recordings", extra={"call_id": call_id})
         return {"error": "no_recordings", "call_id": call_id,
                 "qa": None, "summary": "", "merged_turns": []}
 
-    caller = await transcribe_channel(RECORDINGS / call_id / "caller.wav", call.language, call_id)
-    agent = await transcribe_channel(RECORDINGS / call_id / "agent.wav", call.language, call_id)
+    caller = await transcribe_channel(RECORDINGS / call_id / "caller.wav", call.language,
+                                      call_id, refs.get("caller"))
+    agent = await transcribe_channel(RECORDINGS / call_id / "agent.wav", call.language,
+                                     call_id, refs.get("agent"))
     merged_turns = merge_transcripts(caller, agent)
     merged_text = render(merged_turns)
 
