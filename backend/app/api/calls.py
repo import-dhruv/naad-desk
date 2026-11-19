@@ -109,18 +109,37 @@ async def analyze(call_id: str, db: Session = Depends(get_db)):
 
 
 @router.get("/api/calls/{call_id}/recording/{channel}")
-def recording(call_id: str, channel: str):
+async def recording(call_id: str, channel: str):
     import os
     from pathlib import Path
 
-    from fastapi.responses import FileResponse
+    from fastapi.responses import FileResponse, Response
 
     from ..config import ROOT, settings
+    from ..gateway.blob_store import download_recording, recording_refs
     if channel not in ("caller", "agent"):
         raise HTTPException(400, "invalid channel")
+
+    metadata = db_call_metadata(call_id)
+    ref = recording_refs(metadata).get(channel)
+    if ref:
+        audio = await download_recording(ref)
+        if audio:
+            return Response(content=audio, media_type="audio/wav")
+
     base = (Path(os.getenv("RECORDINGS_DIR", "/tmp/naad-recordings"))
             if settings.is_vercel else ROOT / "recordings")
     path = base / call_id / f"{channel}.wav"
     if not path.exists():
         raise HTTPException(404, "recording not found")
     return FileResponse(path, media_type="audio/wav")
+
+
+def db_call_metadata(call_id: str) -> str | None:
+    from ..db.database import SessionLocal
+    db = SessionLocal()
+    try:
+        call = db.get(m.Call, call_id)
+        return call.metadata_json if call else None
+    finally:
+        db.close()

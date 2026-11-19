@@ -195,8 +195,20 @@ class CallSession:
         if self.ended:
             return
         self.ended = True
-        _write_wav(RECORDINGS / self.call_id / "caller.wav", self.caller_frames, 16000)
-        _write_wav(RECORDINGS / self.call_id / "agent.wav", self.agent_frames, 24000)
+        caller_path = RECORDINGS / self.call_id / "caller.wav"
+        agent_path = RECORDINGS / self.call_id / "agent.wav"
+        _write_wav(caller_path, self.caller_frames, 16000)
+        _write_wav(agent_path, self.agent_frames, 24000)
+
+        # On Vercel the REST instance cannot read this instance's /tmp, so keep
+        # the recordings in the connected Blob store and record the references.
+        refs: dict[str, str] = {}
+        if settings.is_vercel:
+            from .blob_store import upload_recording
+            for channel, path in (("caller", caller_path), ("agent", agent_path)):
+                url = await upload_recording(self.call_id, channel, path.read_bytes())
+                if url:
+                    refs[channel] = url
         try:
             await self.upstream.stop_utterance()
         except Exception:
@@ -213,6 +225,10 @@ class CallSession:
                 call.outcome = "completed" if not self.state.safety_events else "safety_escalation"
                 call.cost_paise = int(self.state.cost_paise)
                 call.language = self.state.language
+                if refs:
+                    meta = json.loads(call.metadata_json or "{}")
+                    meta["recording_refs"] = refs
+                    call.metadata_json = json.dumps(meta, ensure_ascii=False)
                 db.commit()
         finally:
             db.close()
