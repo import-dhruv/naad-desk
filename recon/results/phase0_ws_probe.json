@@ -1,0 +1,206 @@
+{
+  "captured_at": "2026-11-19T04:50:47.762360+00:00",
+  "url": "wss://platform.oogam.ai/v1/realtime?v=2",
+  "elapsed_seconds": 9.79,
+  "handshake_headers": {
+    "server": "nginx",
+    "date": "Thu, 19 Nov 2026 04:50:37 GMT"
+  },
+  "audio_binary_chunks": 16,
+  "audio_binary_bytes": 265952,
+  "events": [
+    {
+      "t": "2026-11-19T04:50:38.141410+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "session.updated",
+        "capabilities": {
+          "function_calling": true,
+          "parallel_tool_calls": false,
+          "max_tools": 20,
+          "max_calls_per_turn": 10,
+          "turn_grounding": false
+        },
+        "limits": {
+          "context_system_max_chars": 8000,
+          "context_total_chars": 7863,
+          "kb_max_chars": 6000,
+          "say_max_chars": 500
+        }
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:38.141454+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "idle"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:38.141811+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "listening"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:39.643621+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "set_lang",
+        "value": "hi"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:40.144355+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "set_voice",
+        "voice": "f1"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:40.211308+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "voice_ack",
+        "voice_id": "f1",
+        "name": "Aditi",
+        "kind": "builtin",
+        "gender": "Female",
+        "seed": 555,
+        "locked": false
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:41.212314+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "set_mode",
+        "mode": "external_brain"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:41.476164+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "mode_ack",
+        "mode": "external_brain",
+        "is_emotion_tags": false
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:42.477327+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "session.update",
+        "session": {
+          "vad_end_silence_ms": 700,
+          "input_audio_format": "pcm_16000",
+          "output_audio_format": "pcm_24000"
+        }
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:43.478752+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "say",
+        "text": "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है।",
+        "final": false,
+        "lang": "hi"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:43.478884+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "say",
+        "text": "मैं आपकी क्या मदद कर सकता हूँ?",
+        "final": true,
+        "lang": "hi"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:44.409479+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "thinking"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:44.409538+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "reply",
+        "text": "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "emotion": "neutral",
+        "lang": "hi"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:44.852797+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "speaking"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:44.930469+00:00",
+      "type": "_BINARY_AUDIO",
+      "bytes": 16384
+    },
+    {
+      "t": "2026-11-19T04:50:44.933211+00:00",
+      "type": "_BINARY_AUDIO",
+      "bytes": 16384
+    },
+    {
+      "t": "2026-11-19T04:50:45.036348+00:00",
+      "type": "_BINARY_AUDIO",
+      "bytes": 16384
+    },
+    {
+      "t": "2026-11-19T04:50:46.527378+00:00",
+      "type": "SENT",
+      "event": {
+        "type": "stop_utterance"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:46.842148+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "interrupted"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:46.842210+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "idle"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:46.842264+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "idle"
+      }
+    },
+    {
+      "t": "2026-11-19T04:50:47.203582+00:00",
+      "type": "TEXT",
+      "event": {
+        "type": "state",
+        "value": "listening"
+      }
+    }
+  ]
+}

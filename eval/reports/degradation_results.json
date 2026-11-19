@@ -1,0 +1,328 @@
+{
+  "run_id": "eval-degrade-ec756b65",
+  "metrics": {
+    "condition_wer": {
+      "8khz": 0.4059,
+      "snr10": 0.3721,
+      "snr5": 0.4415
+    },
+    "paired_bootstrap_vs_clean": {
+      "8khz": {
+        "difference": 0.0477,
+        "ci_low": -0.0182,
+        "ci_high": 0.1641,
+        "significant": false,
+        "resamples": 10000,
+        "seed": 20261119
+      },
+      "snr10": {
+        "difference": 0.0139,
+        "ci_low": -0.0409,
+        "ci_high": 0.0661,
+        "significant": false,
+        "resamples": 10000,
+        "seed": 20261119
+      },
+      "snr5": {
+        "difference": 0.0833,
+        "ci_low": -0.0062,
+        "ci_high": 0.2065,
+        "significant": false,
+        "resamples": 10000,
+        "seed": 20261119
+      }
+    },
+    "completed_trials": 36,
+    "failed_trials": 0
+  },
+  "samples": [
+    {
+      "sample_id": "hi-000",
+      "language": "hi",
+      "condition": "8khz",
+      "clean_wer": 0.027777777777777776,
+      "wer": 0.027777777777777776,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-000",
+      "language": "hi",
+      "condition": "snr10",
+      "clean_wer": 0.027777777777777776,
+      "wer": 0.027777777777777776,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-000",
+      "language": "hi",
+      "condition": "snr5",
+      "clean_wer": 0.027777777777777776,
+      "wer": 0.027777777777777776,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-001",
+      "language": "hi",
+      "condition": "8khz",
+      "clean_wer": 0.40540540540540543,
+      "wer": 0.40540540540540543,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-001",
+      "language": "hi",
+      "condition": "snr10",
+      "clean_wer": 0.40540540540540543,
+      "wer": 0.40540540540540543,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-001",
+      "language": "hi",
+      "condition": "snr5",
+      "clean_wer": 0.40540540540540543,
+      "wer": 0.4594594594594595,
+      "degradation": 0.0541
+    },
+    {
+      "sample_id": "hi-002",
+      "language": "hi",
+      "condition": "8khz",
+      "clean_wer": 1.1875,
+      "wer": 1.125,
+      "degradation": -0.0625
+    },
+    {
+      "sample_id": "hi-002",
+      "language": "hi",
+      "condition": "snr10",
+      "clean_wer": 1.1875,
+      "wer": 1.0,
+      "degradation": -0.1875
+    },
+    {
+      "sample_id": "hi-002",
+      "language": "hi",
+      "condition": "snr5",
+      "clean_wer": 1.1875,
+      "wer": 1.0625,
+      "degradation": -0.125
+    },
+    {
+      "sample_id": "hi-003",
+      "language": "hi",
+      "condition": "8khz",
+      "clean_wer": 0.26666666666666666,
+      "wer": 0.26666666666666666,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "hi-003",
+      "language": "hi",
+      "condition": "snr10",
+      "clean_wer": 0.26666666666666666,
+      "wer": 0.3,
+      "degradation": 0.0333
+    },
+    {
+      "sample_id": "hi-003",
+      "language": "hi",
+      "condition": "snr5",
+      "clean_wer": 0.26666666666666666,
+      "wer": 0.3,
+      "degradation": 0.0333
+    },
+    {
+      "sample_id": "gu-000",
+      "language": "gu",
+      "condition": "8khz",
+      "clean_wer": 0.71875,
+      "wer": 0.6875,
+      "degradation": -0.0312
+    },
+    {
+      "sample_id": "gu-000",
+      "language": "gu",
+      "condition": "snr10",
+      "clean_wer": 0.71875,
+      "wer": 0.71875,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-000",
+      "language": "gu",
+      "condition": "snr5",
+      "clean_wer": 0.71875,
+      "wer": 0.71875,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-001",
+      "language": "gu",
+      "condition": "8khz",
+      "clean_wer": 0.3548387096774194,
+      "wer": 0.3548387096774194,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-001",
+      "language": "gu",
+      "condition": "snr10",
+      "clean_wer": 0.3548387096774194,
+      "wer": 0.3548387096774194,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-001",
+      "language": "gu",
+      "condition": "snr5",
+      "clean_wer": 0.3548387096774194,
+      "wer": 0.3548387096774194,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-002",
+      "language": "gu",
+      "condition": "8khz",
+      "clean_wer": 0.2777777777777778,
+      "wer": 0.2777777777777778,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-002",
+      "language": "gu",
+      "condition": "snr10",
+      "clean_wer": 0.2777777777777778,
+      "wer": 0.2777777777777778,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-002",
+      "language": "gu",
+      "condition": "snr5",
+      "clean_wer": 0.2777777777777778,
+      "wer": 0.2777777777777778,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-003",
+      "language": "gu",
+      "condition": "8khz",
+      "clean_wer": 0.7096774193548387,
+      "wer": 0.7096774193548387,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-003",
+      "language": "gu",
+      "condition": "snr10",
+      "clean_wer": 0.7096774193548387,
+      "wer": 0.7096774193548387,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "gu-003",
+      "language": "gu",
+      "condition": "snr5",
+      "clean_wer": 0.7096774193548387,
+      "wer": 0.7419354838709677,
+      "degradation": 0.0323
+    },
+    {
+      "sample_id": "en-in-000",
+      "language": "en-in",
+      "condition": "8khz",
+      "clean_wer": 0.0,
+      "wer": 0.0,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "en-in-000",
+      "language": "en-in",
+      "condition": "snr10",
+      "clean_wer": 0.0,
+      "wer": 0.07142857142857142,
+      "degradation": 0.0714
+    },
+    {
+      "sample_id": "en-in-000",
+      "language": "en-in",
+      "condition": "snr5",
+      "clean_wer": 0.0,
+      "wer": 0.07142857142857142,
+      "degradation": 0.0714
+    },
+    {
+      "sample_id": "en-in-001",
+      "language": "en-in",
+      "condition": "8khz",
+      "clean_wer": 0.08333333333333333,
+      "wer": 0.08333333333333333,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "en-in-001",
+      "language": "en-in",
+      "condition": "snr10",
+      "clean_wer": 0.08333333333333333,
+      "wer": 0.0,
+      "degradation": -0.0833
+    },
+    {
+      "sample_id": "en-in-001",
+      "language": "en-in",
+      "condition": "snr5",
+      "clean_wer": 0.08333333333333333,
+      "wer": 0.08333333333333333,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "en-in-002",
+      "language": "en-in",
+      "condition": "8khz",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.8,
+      "degradation": 0.6667
+    },
+    {
+      "sample_id": "en-in-002",
+      "language": "en-in",
+      "condition": "snr10",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.26666666666666666,
+      "degradation": 0.1333
+    },
+    {
+      "sample_id": "en-in-002",
+      "language": "en-in",
+      "condition": "snr5",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.8,
+      "degradation": 0.6667
+    },
+    {
+      "sample_id": "en-in-003",
+      "language": "en-in",
+      "condition": "8khz",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.13333333333333333,
+      "degradation": 0.0
+    },
+    {
+      "sample_id": "en-in-003",
+      "language": "en-in",
+      "condition": "snr10",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.3333333333333333,
+      "degradation": 0.2
+    },
+    {
+      "sample_id": "en-in-003",
+      "language": "en-in",
+      "condition": "snr5",
+      "clean_wer": 0.13333333333333333,
+      "wer": 0.4,
+      "degradation": 0.2667
+    }
+  ]
+}

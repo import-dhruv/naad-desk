@@ -1,0 +1,25 @@
+{
+  "run_id": "eval-latency-605aa093",
+  "metrics": {
+    "turn_count": 75,
+    "p50_ms": 1670.27,
+    "p95_ms": 2137.81,
+    "mean_ms": 1541.4,
+    "min_ms": 0.03,
+    "max_ms": 2694.28,
+    "worst_5_percent": [
+      2148.82,
+      2295.03,
+      2694.28
+    ],
+    "p50_ci": {
+      "mean": 1670.27,
+      "ci_low": 1494.99,
+      "ci_high": 1759.4,
+      "resamples": 10000,
+      "seed": 20261119
+    },
+    "vad_floor_ms": 700,
+    "note": "Timing comes from server-side turn instrumentation; VAD 700 ms floor included."
+  }
+}

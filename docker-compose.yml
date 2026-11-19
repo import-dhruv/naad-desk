@@ -1,0 +1,16 @@
+services:
+  naad-desk:
+    build: .
+    ports:
+      - "8100:8000"
+    env_file:
+      - .env
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:////app/data/naad_desk.db
+    volumes:
+      - naad-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  naad-data:

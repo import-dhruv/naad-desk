@@ -1,0 +1,380 @@
+{
+  "run_id": "eval-wer-05f9540a",
+  "metrics": {
+    "pooled_wer": 0.5003,
+    "macro_wer": 0.5003,
+    "by_language": {
+      "hi": 0.4069,
+      "gu": 0.4756,
+      "hinglish": 0.9762,
+      "en-in": 0.1424
+    },
+    "ci_pooled": {
+      "mean": 0.5003,
+      "ci_low": 0.3713,
+      "ci_high": 0.6413,
+      "resamples": 10000,
+      "seed": 20261119
+    },
+    "completed_trials": 32,
+    "failed_trials": 0,
+    "conditions": [
+      "clean"
+    ],
+    "sample_rate_hz": 16000
+  },
+  "samples": [
+    {
+      "sample_id": "hi-000",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "हाँ सोमवार से शनिवार मेरा नाम पटेल है हाँ, ठीक है शुल्क पाँच सौ रुपये अरे, थोड़ा इंतज़ार कीजिए।",
+      "hypothesis": "हाँ सोमवार से शनिवार मेरा नाम पटेल है हाँ ठीक है शुल्क पाँच सौ रुपये आ रही है थोड़ा इंतज़ार कीजिए",
+      "wer": 0.08333333333333333,
+      "normalized_reference": "ह स मव र स शन व र म र न म पट ल ह ह ठ क ह श ल क प च स र पय अर थ ड इ तज र क ज ए",
+      "normalized_hypothesis": "ह स मव र स शन व र म र न म पट ल ह ह ठ क ह श ल क प च स र पय आ रह ह थ ड इ तज र क ज ए",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-001",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "अरे हाँ, ठीक है फ़ोन नंबर 9876543210 सोमवार से शनिवार डॉक्टर मेहता अरे, थोड़ा इंतज़ार कीजिए खांसी और बुखार।",
+      "hypothesis": "अरे हाँ ठीक है phone number nine eight seven six five four three two one zero सोमवार से शनिवार doctor मेहता अरे थोड़ा इंतजार कीजिए खांसी और बुखार",
+      "wer": 0.40540540540540543,
+      "normalized_reference": "अर ह ठ क ह फ न न बर 9876543210 स मव र स शन व र ड क टर म हत अर थ ड इ तज र क ज ए ख स और ब ख र",
+      "normalized_hypothesis": "अर ह ठ क ह phone number nine eight seven six five four three two one zero स मव र स शन व र doctor म हत अर थ ड इ तज र क ज ए ख स और ब ख र",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-002",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "um, फ़ोन नंबर 9876543210 तारीख़ बीस डॉक्टर मेहता।",
+      "hypothesis": "अअअ phone number nine eight seven six five four three two one zero तारीख 20 doctor mehta ।",
+      "wer": 1.1875,
+      "normalized_reference": "um फ न न बर 9876543210 त र ख ब स ड क टर म हत",
+      "normalized_hypothesis": "अअअ phone number nine eight seven six five four three two one zero त र ख 20 doctor mehta",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-003",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "um, डॉक्टर मेहता अरे, थोड़ा इंतज़ार कीजिए पार्किंग उपलब्ध है शुल्क पाँच सौ रुपये।",
+      "hypothesis": "अम doctor मेहता अरे थोड़ा इंतजार कीजिए parking उपलब्ध है शुल्क पाँच सौ रुपये।",
+      "wer": 0.26666666666666666,
+      "normalized_reference": "um ड क टर म हत अर थ ड इ तज र क ज ए प र क ग उपलब ध ह श ल क प च स र पय",
+      "normalized_hypothesis": "अम doctor म हत अर थ ड इ तज र क ज ए parking उपलब ध ह श ल क प च स र पय",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-004",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "हाँ शर्मा क्लिनिक अरे, थोड़ा इंतज़ार कीजिए फ़ोन नंबर 9876543210 मेरा नाम पटेल है तारीख़ बीस।",
+      "hypothesis": "हाँ शर्मा clinic अरे थोड़ा इंतजार कीजिए phone number nine eight seven six five four three two one zero मेरा नाम पटेल है तारीख बीस",
+      "wer": 0.48484848484848486,
+      "normalized_reference": "ह शर म क ल न क अर थ ड इ तज र क ज ए फ न न बर 9876543210 म र न म पट ल ह त र ख ब स",
+      "normalized_hypothesis": "ह शर म clinic अर थ ड इ तज र क ज ए phone number nine eight seven six five four three two one zero म र न म पट ल ह त र ख ब स",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-005",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "अपॉइंटमेंट अरे, थोड़ा इंतज़ार कीजिए मेरा नाम पटेल है सुबह दस बजे डॉक्टर मेहता फ़ोन नंबर 9876543210।",
+      "hypothesis": "Appointment? अरे थोड़ा इंतजार कीजिए। मेरा नाम पटेल है। सुबह 10 बजे doctor मेहता, phone number 98765, four three two one zero.",
+      "wer": 0.47058823529411764,
+      "normalized_reference": "अप इ टम ट अर थ ड इ तज र क ज ए म र न म पट ल ह स बह दस बज ड क टर म हत फ न न बर 9876543210",
+      "normalized_hypothesis": "appointment अर थ ड इ तज र क ज ए म र न म पट ल ह स बह 10 बज doctor म हत phone number 98765 four three two one zero",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-006",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "सुबह दस बजे हाँ, ठीक है डॉक्टर मेहता कल।",
+      "hypothesis": "सुबह दस बजे हाँ ठीक है doctor मेहता कल",
+      "wer": 0.21428571428571427,
+      "normalized_reference": "स बह दस बज ह ठ क ह ड क टर म हत कल",
+      "normalized_hypothesis": "स बह दस बज ह ठ क ह doctor म हत कल",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hi-007",
+      "condition": "clean",
+      "language": "hi",
+      "reference": "अरे खांसी और बुखार हाँ, ठीक है सोमवार से शनिवार शर्मा क्लिनिक सुबह दस बजे।",
+      "hypothesis": "अरे खांसी और बुखार हां ठीक है। सोमवार से शनिवार शर्मा clinic सुबह दस बजे।",
+      "wer": 0.14285714285714285,
+      "normalized_reference": "अर ख स और ब ख र ह ठ क ह स मव र स शन व र शर म क ल न क स बह दस बज",
+      "normalized_hypothesis": "अर ख स और ब ख र ह ठ क ह स मव र स शन व र शर म clinic स बह दस बज",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-000",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "हाँ હા, બરાબર પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210 ઉધરસ અને તાવ સવારે દસ વાગ્યે શર્મા ક્લિનિક।",
+      "hypothesis": "હા હા બરાબર parking ઉપલબ્ધ છે phone number nine eight સાત six five four three two one zero ઉધરસ અને તાવ સવારે દસ વાગે શર્મા clinic",
+      "wer": 0.71875,
+      "normalized_reference": "ह હ બર બર પ ર ક ગ ઉપલબ ધ છ ફ ન ન બર 9876543210 ઉધરસ અન ત વ સવ ર દસ વ ગ ય શર મ ક લ ન ક",
+      "normalized_hypothesis": "હ હ બર બર parking ઉપલબ ધ છ phone number nine eight સ ત six five four three two one zero ઉધરસ અન ત વ સવ ર દસ વ ગ શર મ clinic",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-001",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "हाँ કાલે શર્મા ક્લિનિક ફી પાંચસો રૂપિયા ઉધરસ અને તાવ મારું નામ પટેલ છે એપોઇન્ટમેન્ટ।",
+      "hypothesis": "હા કાલે શર્મા clinic fee પાંચસો રૂપિયા ઉધરસ અને તાવ મારું નામ પટેલ છે appointment",
+      "wer": 0.3548387096774194,
+      "normalized_reference": "ह ક લ શર મ ક લ ન ક ફ પ ચસ ર પ ય ઉધરસ અન ત વ મ ર ન મ પટ લ છ એપ ઇન ટમ ન ટ",
+      "normalized_hypothesis": "હ ક લ શર મ clinic fee પ ચસ ર પ ય ઉધરસ અન ત વ મ ર ન મ પટ લ છ appointment",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-002",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "हाँ ઉધરસ અને તાવ સોમવારથી શનિવાર પાર્કિંગ ઉપલબ્ધ છે।",
+      "hypothesis": "હા ઉધરસ અને તાવ સોમવારથી શનિવાર parking ઉપલબ્ધ છે",
+      "wer": 0.2777777777777778,
+      "normalized_reference": "ह ઉધરસ અન ત વ સ મવ રથ શન વ ર પ ર ક ગ ઉપલબ ધ છ",
+      "normalized_hypothesis": "હ ઉધરસ અન ત વ સ મવ રથ શન વ ર parking ઉપલબ ધ છ",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-003",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "મારું નામ પટેલ છે પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210 સવારે દસ વાગ્યે શર્મા ક્લિનિક।",
+      "hypothesis": "મારું નામ પટેલ છે parking ઉપલબ્ધ છે phone number nine eight સાત six five four three two one zero સવારે દસ વાગે શર્મા clinic",
+      "wer": 0.7096774193548387,
+      "normalized_reference": "મ ર ન મ પટ લ છ પ ર ક ગ ઉપલબ ધ છ ફ ન ન બર 9876543210 સવ ર દસ વ ગ ય શર મ ક લ ન ક",
+      "normalized_hypothesis": "મ ર ન મ પટ લ છ parking ઉપલબ ધ છ phone number nine eight સ ત six five four three two one zero સવ ર દસ વ ગ શર મ clinic",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-004",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "हाँ સવારે દસ વાગ્યે સોમવારથી શનિવાર શર્મા ક્લિનિક એપોઇન્ટમેન્ટ।",
+      "hypothesis": "હા સવારે દસ વાગે સોમવારથી શનિવાર શર્મા clinic appointment.",
+      "wer": 0.4583333333333333,
+      "normalized_reference": "ह સવ ર દસ વ ગ ય સ મવ રથ શન વ ર શર મ ક લ ન ક એપ ઇન ટમ ન ટ",
+      "normalized_hypothesis": "હ સવ ર દસ વ ગ સ મવ રથ શન વ ર શર મ clinic appointment",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-005",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "अरे શર્મા ક્લિનિક હા, બરાબર ફોન નંબર 9876543210 એપોઇન્ટમેન્ટ પાર્કિંગ ઉપલબ્ધ છે કાલે।",
+      "hypothesis": "અરે શર્મા ટ્યુનિકા બરાબર phone number nine eight seven six five four three two one zero appointment parking ઉપલબ્ધ છે કાલે",
+      "wer": 0.6206896551724138,
+      "normalized_reference": "अर શર મ ક લ ન ક હ બર બર ફ ન ન બર 9876543210 એપ ઇન ટમ ન ટ પ ર ક ગ ઉપલબ ધ છ ક લ",
+      "normalized_hypothesis": "અર શર મ ટ ય ન ક બર બર phone number nine eight seven six five four three two one zero appointment parking ઉપલબ ધ છ ક લ",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-006",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "um, ઉધરસ અને તાવ ફી પાંચસો રૂપિયા ડૉક્ટર મેહતા તારીખ વીસમી।",
+      "hypothesis": "અં ઉધરસ અને તાવ ફી પાંચસો રૂપિયા doctor મહેતા તારીખ વીસમી",
+      "wer": 0.2857142857142857,
+      "normalized_reference": "um ઉધરસ અન ત વ ફ પ ચસ ર પ ય ડ ક ટર મ હત ત ર ખ વ સમ",
+      "normalized_hypothesis": "અ ઉધરસ અન ત વ ફ પ ચસ ર પ ય doctor મહ ત ત ર ખ વ સમ",
+      "status": "ok"
+    },
+    {
+      "sample_id": "gu-007",
+      "condition": "clean",
+      "language": "gu",
+      "reference": "हद પાર્કિંગ ઉપલબ્ધ છે ફી પાંચસો રૂપિયા શર્મા ક્લિનિક અરે, થોડીવાર રાહ જુઓ।",
+      "hypothesis": "હદ parking ઉપલબ્ધ છે. fee પાંચસો રૂપિયા શર્મા clinic ઘરે. થોડીવાર રાહ જુઓ.",
+      "wer": 0.3793103448275862,
+      "normalized_reference": "हद પ ર ક ગ ઉપલબ ધ છ ફ પ ચસ ર પ ય શર મ ક લ ન ક અર થ ડ વ ર ર હ જ ઓ",
+      "normalized_hypothesis": "હદ parking ઉપલબ ધ છ fee પ ચસ ર પ ય શર મ clinic ઘર થ ડ વ ર ર હ જ ઓ",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-000",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "अरे my name is Patel appointment Dr Mehta parking available hai.",
+      "hypothesis": "अरे my name is पतेल appointment doctor मेहता मेहता parking available है",
+      "wer": 0.7272727272727273,
+      "normalized_reference": "अर my name is patel appointment dr mehta parking available hai",
+      "normalized_hypothesis": "अर my name is पत ल appointment doctor म हत म हत parking available ह",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-001",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "हाँ haan, theek hai date 20 Monday to Saturday kal subah 10 baje phone 9876543210 Dr Mehta.",
+      "hypothesis": "हाँ हाँ ठीक है date बीस monday to saturday केवल सुबह दस बजे phone nine eight eight seven six five four three two one zero doctor मेहता",
+      "wer": 1.5294117647058822,
+      "normalized_reference": "ह haan theek hai date 20 monday to saturday kal subah 10 baje phone 9876543210 dr mehta",
+      "normalized_hypothesis": "ह ह ठ क ह date ब स monday to saturday क वल स बह दस बज phone nine eight eight seven six five four three two one zero doctor म हत",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-002",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "हाँ date 20 cough aur fever arey, thoda wait karo appointment.",
+      "hypothesis": "हां date बीस cough और fever आरे थोड़ा wait करो appointment",
+      "wer": 0.6363636363636364,
+      "normalized_reference": "ह date 20 cough aur fever arey thoda wait karo appointment",
+      "normalized_hypothesis": "ह date ब स cough और fever आर थ ड wait कर appointment",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-003",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "हाँ cough aur fever aaj arey, thoda wait karo fee 500 rupees.",
+      "hypothesis": "हां cough और fever आज अरे थोड़ा wait करो फिर ₹500",
+      "wer": 0.75,
+      "normalized_reference": "ह cough aur fever aaj arey thoda wait karo fee 500 rupees",
+      "normalized_hypothesis": "ह cough और fever आज अर थ ड wait कर फ र 500",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-004",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "अरे kal subah 10 baje date 20 Dr Mehta.",
+      "hypothesis": "अरे कल सुबह दस बजे date, बीस doctor मेता।",
+      "wer": 1.1111111111111112,
+      "normalized_reference": "अर kal subah 10 baje date 20 dr mehta",
+      "normalized_hypothesis": "अर कल स बह दस बज date ब स doctor म त",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-005",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "arey, thoda wait karo fee 500 rupees Dr Mehta Sharma clinic appointment.",
+      "hypothesis": "आरी थोड़ा wait करो fee पाँच सौ रुपीज़ doctor मेथा शर्मा clinic appointment ।",
+      "wer": 1.25,
+      "normalized_reference": "arey thoda wait karo fee 500 rupees dr mehta sharma clinic appointment",
+      "normalized_hypothesis": "आर थ ड wait कर fee प च स र प ज doctor म थ शर म clinic appointment",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-006",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "हाँ Monday to Saturday phone 9876543210 cough aur fever.",
+      "hypothesis": "हां monday to saturday phone nine eight seven six five four three two one zero cough और fever ।",
+      "wer": 1.2222222222222223,
+      "normalized_reference": "ह monday to saturday phone 9876543210 cough aur fever",
+      "normalized_hypothesis": "ह monday to saturday phone nine eight seven six five four three two one zero cough और fever",
+      "status": "ok"
+    },
+    {
+      "sample_id": "hinglish-007",
+      "condition": "clean",
+      "language": "hinglish",
+      "reference": "kal subah 10 baje Monday to Saturday fee 500 rupees Sharma clinic.",
+      "hypothesis": "कल सुबह थस बजे monday to saturday fee ₹500 शर्मा clinic ।",
+      "wer": 0.5833333333333334,
+      "normalized_reference": "kal subah 10 baje monday to saturday fee 500 rupees sharma clinic",
+      "normalized_hypothesis": "कल स बह थस बज monday to saturday fee 500 शर म clinic",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-000",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, Monday to Saturday my name is Patel parking is available appointment Dr Mehta.",
+      "hypothesis": "Well, monday to Saturday, my name is Patel. parking is available. Appointment, Dr. Mehta.",
+      "wer": 0.0,
+      "normalized_reference": "well monday to saturday my name is patel parking is available appointment dr mehta",
+      "normalized_hypothesis": "well monday to saturday my name is patel parking is available appointment dr mehta",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-001",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, Sharma clinic Dr Mehta parking is available my name is Patel.",
+      "hypothesis": "Well, sharma Clinic. Dr. neta parking is available. my name is Patel.",
+      "wer": 0.08333333333333333,
+      "normalized_reference": "well sharma clinic dr mehta parking is available my name is patel",
+      "normalized_hypothesis": "well sharma clinic dr neta parking is available my name is patel",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-002",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "um, Sharma clinic parking is available Dr Mehta my name is Patel phone number 9876543210.",
+      "hypothesis": "Um, sharma clinic parking is available. Dr. Mehta, my name. is patel phone number 98765-43210.",
+      "wer": 0.13333333333333333,
+      "normalized_reference": "um sharma clinic parking is available dr mehta my name is patel phone number 9876543210",
+      "normalized_hypothesis": "um sharma clinic parking is available dr mehta my name is patel phone number 98765 43210",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-003",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, Dr Mehta um, just a moment please the twentieth cough and fever Sharma clinic.",
+      "hypothesis": "Well, Dr. Mehta, um, just a moment please. the 20th cough and fever shurma Clinic.",
+      "wer": 0.13333333333333333,
+      "normalized_reference": "well dr mehta um just a moment please the twentieth cough and fever sharma clinic",
+      "normalized_hypothesis": "well dr mehta um just a moment please the 20th cough and fever shurma clinic",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-004",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "appointment Dr Mehta ten in the morning the twentieth.",
+      "hypothesis": "Appointment, Dr. Mehta, 10 in the morning, the 20th",
+      "wer": 0.2222222222222222,
+      "normalized_reference": "appointment dr mehta ten in the morning the twentieth",
+      "normalized_hypothesis": "appointment dr mehta 10 in the morning the 20th",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-005",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, phone number 9876543210 appointment Monday to Saturday yes, that's right my name is Patel fee five hundred rupees.",
+      "hypothesis": "Well, phone number 98765. 43210 appointment, monday to Saturday. Yes, that's right. my name is Patel. fee 500 rupees.",
+      "wer": 0.2,
+      "normalized_reference": "well phone number 9876543210 appointment monday to saturday yes that s right my name is patel fee five hundred rupees",
+      "normalized_hypothesis": "well phone number 98765 43210 appointment monday to saturday yes that s right my name is patel fee 500 rupees",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-006",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, ten in the morning fee five hundred rupees Sharma clinic my name is Patel.",
+      "hypothesis": "Well, 10 in the morning, fee 500 rupees. sharma Clinic. my name is Patel.",
+      "wer": 0.2,
+      "normalized_reference": "well ten in the morning fee five hundred rupees sharma clinic my name is patel",
+      "normalized_hypothesis": "well 10 in the morning fee 500 rupees sharma clinic my name is patel",
+      "status": "ok"
+    },
+    {
+      "sample_id": "en-in-007",
+      "condition": "clean",
+      "language": "en-in",
+      "reference": "well, Dr Mehta tomorrow parking is available the twentieth um, just a moment please ten in the morning.",
+      "hypothesis": "Well, Dr. Mehta, tomorrow parking is available the 20th. just a moment, please, 10 in the morning.",
+      "wer": 0.16666666666666666,
+      "normalized_reference": "well dr mehta tomorrow parking is available the twentieth um just a moment please ten in the morning",
+      "normalized_hypothesis": "well dr mehta tomorrow parking is available the 20th just a moment please 10 in the morning",
+      "status": "ok"
+    }
+  ]
+}

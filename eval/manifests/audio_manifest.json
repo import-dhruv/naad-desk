@@ -1,0 +1,1682 @@
+[
+  {
+    "sample_id": "gu-000",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-000.wav",
+    "sha256": "9a22f0a8206f269f52fe1eb9be451fc6f0ba1f63b3c76fafab436892a7d6b091",
+    "reference": "हाँ હા, બરાબર પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210 ઉધરસ અને તાવ સવારે દસ વાગ્યે શર્મા ક્લિનિક।"
+  },
+  {
+    "sample_id": "gu-001",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-001.wav",
+    "sha256": "f98d37e18c310dd6bf6d3a8c005ff107650983c218f6fc009e5df4cd5b229ae5",
+    "reference": "हाँ કાલે શર્મા ક્લિનિક ફી પાંચસો રૂપિયા ઉધરસ અને તાવ મારું નામ પટેલ છે એપોઇન્ટમેન્ટ।"
+  },
+  {
+    "sample_id": "gu-002",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-002.wav",
+    "sha256": "bc58e43cc4766e0660786e78ad6073c1f5af54720719326dac261cdb042fda46",
+    "reference": "हाँ ઉધરસ અને તાવ સોમવારથી શનિવાર પાર્કિંગ ઉપલબ્ધ છે।"
+  },
+  {
+    "sample_id": "gu-003",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-003.wav",
+    "sha256": "349194599d874cda8e9535a839ffacd2cd3785eb8ab74cdb9a2e2b27152213a6",
+    "reference": "મારું નામ પટેલ છે પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210 સવારે દસ વાગ્યે શર્મા ક્લિનિક।"
+  },
+  {
+    "sample_id": "gu-004",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-004.wav",
+    "sha256": "1dc54f2ad176e727df7f9cc412c0a4198ca221243c18926de16cdc96af77dcb5",
+    "reference": "हाँ સવારે દસ વાગ્યે સોમવારથી શનિવાર શર્મા ક્લિનિક એપોઇન્ટમેન્ટ।"
+  },
+  {
+    "sample_id": "gu-005",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-005.wav",
+    "sha256": "f34119efca55850bd52655758f7031eee08c5ada6ed201eb830f0956f36c9325",
+    "reference": "अरे શર્મા ક્લિનિક હા, બરાબર ફોન નંબર 9876543210 એપોઇન્ટમેન્ટ પાર્કિંગ ઉપલબ્ધ છે કાલે।"
+  },
+  {
+    "sample_id": "gu-006",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-006.wav",
+    "sha256": "5d69f71ecbd89f6d6385232cd13427ab54ffa386501755d56fee5aee4d26a533",
+    "reference": "um, ઉધરસ અને તાવ ફી પાંચસો રૂપિયા ડૉક્ટર મેહતા તારીખ વીસમી।"
+  },
+  {
+    "sample_id": "gu-007",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-007.wav",
+    "sha256": "c264383dfe0258d0b700d3afe45e8d0f95f9c7efc5be316b328e6200fd886906",
+    "reference": "हद પાર્કિંગ ઉપલબ્ધ છે ફી પાંચસો રૂપિયા શર્મા ક્લિનિક અરે, થોડીવાર રાહ જુઓ।"
+  },
+  {
+    "sample_id": "gu-008",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-008.wav",
+    "sha256": "86ef6326ccc66634b9e81a491ead12e22e63ad9186b37cab2d7255a6caf7cac1",
+    "reference": "um, કાલે શર્મા ક્લિનિક ડૉક્ટર મેહતા હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-009",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-009.wav",
+    "sha256": "40022bf345f93466f474dc6604cf1f71ee702ba046db373a0d8e57dc4466a420",
+    "reference": "um, તારીખ વીસમી અરે, થોડીવાર રાહ જુઓ ફોન નંબર 9876543210 શર્મા ક્લિનિક।"
+  },
+  {
+    "sample_id": "gu-010",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-010.wav",
+    "sha256": "fd187862b73fd5cdb493549070c766fa7b2501a6bacfdfa638efab7f4d6f751c",
+    "reference": "um, ડૉક્ટર મેહતા ઉધરસ અને તાવ સવારે દસ વાગ્યે મારું નામ પટેલ છે એપોઇન્ટમેન્ટ।"
+  },
+  {
+    "sample_id": "gu-011",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-011.wav",
+    "sha256": "b5303dd30b4e4dde0eb28486fc8497268faa6c83506547e39e4fe1fbf53d6d71",
+    "reference": "તારીખ વીસમી સવારે દસ વાગ્યે ફોન નંબર 9876543210 સોમવારથી શનિવાર એપોઇન્ટમેન્ટ અરે, થોડીવાર રાહ જુઓ।"
+  },
+  {
+    "sample_id": "gu-012",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-012.wav",
+    "sha256": "fd47ce0caa696064a627cbbf36ee2a4a942cd5acb66ac0aee8d9857ab6a57adc",
+    "reference": "um, ડૉક્ટર મેહતા હા, બરાબર સોમવારથી શનિવાર એપોઇન્ટમેન્ટ પાર્કિંગ ઉપલબ્ધ છે।"
+  },
+  {
+    "sample_id": "gu-013",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-013.wav",
+    "sha256": "89bfe84261847ba87fee7d3095fdf5344cfc3a509992bfe965b638c3dd163ad7",
+    "reference": "हद ફી પાંચસો રૂપિયા ઉધરસ અને તાવ શર્મા ક્લિનિક પાર્કિંગ ઉપલબ્ધ છે।"
+  },
+  {
+    "sample_id": "gu-014",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-014.wav",
+    "sha256": "37a6973e205333f136991d820658722a22d5e2c0ca5269e678ddf6f1b2a3a020",
+    "reference": "um, અરે, થોડીવાર રાહ જુઓ પાર્કિંગ ઉપલબ્ધ છે સોમવારથી શનિવાર તારીખ વીસમી ફી પાંચસો રૂપિયા હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-015",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-015.wav",
+    "sha256": "242298319e7c0b2d9c0e919ec326f4cfea3199a61b762c1e03575e953627e024",
+    "reference": "हद ફી પાંચસો રૂપિયા ઉધરસ અને તાવ મારું નામ પટેલ છે કાલે અરે, થોડીવાર રાહ જુઓ તારીખ વીસમી।"
+  },
+  {
+    "sample_id": "gu-016",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-016.wav",
+    "sha256": "5b347ec12609f346718cec07f43ee172d823707e4ca6ed8ca20be47ce34b4c26",
+    "reference": "हद મારું નામ પટેલ છે સવારે દસ વાગ્યે તારીખ વીસમી કાલે।"
+  },
+  {
+    "sample_id": "gu-017",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-017.wav",
+    "sha256": "6bfa52f94877f15acf894a7813e8dc4540d4cce325589def133b1dcbf4bd2bb3",
+    "reference": "हाँ શર્મા ક્લિનિક ફોન નંબર 9876543210 સોમવારથી શનિવાર ફી પાંચસો રૂપિયા અરે, થોડીવાર રાહ જુઓ।"
+  },
+  {
+    "sample_id": "gu-018",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-018.wav",
+    "sha256": "ee7ba6302329157fab444e9bb013dc1a9abf6b0e2247da91fd747b5504269f2d",
+    "reference": "हद અરે, થોડીવાર રાહ જુઓ શર્મા ક્લિનિક એપોઇન્ટમેન્ટ।"
+  },
+  {
+    "sample_id": "gu-019",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-019.wav",
+    "sha256": "e63d890241f33d82b0f2634b2a1c5396b2c268697456e0a2f09dd78ce3819e34",
+    "reference": "हद એપોઇન્ટમેન્ટ ડૉક્ટર મેહતા તારીખ વીસમી પાર્કિંગ ઉપલબ્ધ છે શર્મા ક્લિનિક ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-020",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-020.wav",
+    "sha256": "dd89f0329380557b3b6639dc54df7bfff7179172f335af49c95e057774832e7b",
+    "reference": "um, કાલે તારીખ વીસમી શર્મા ક્લિનિક સવારે દસ વાગ્યે ડૉક્ટર મેહતા ઉધરસ અને તાવ।"
+  },
+  {
+    "sample_id": "gu-021",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-021.wav",
+    "sha256": "62e6ab7bb9d52b74921cd8c76bc47582efa676b1edf987922e97e020c85f3f6a",
+    "reference": "अरे ઉધરસ અને તાવ સોમવારથી શનિવાર પાર્કિંગ ઉપલબ્ધ છે।"
+  },
+  {
+    "sample_id": "gu-022",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-022.wav",
+    "sha256": "5bf3b7cb2df0a53b87424eb0ff49ac1c337730471bae3373339e0ea2d2b646e3",
+    "reference": "um, તારીખ વીસમી પાર્કિંગ ઉપલબ્ધ છે ઉધરસ અને તાવ કાલે ડૉક્ટર મેહતા સવારે દસ વાગ્યે।"
+  },
+  {
+    "sample_id": "gu-023",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-023.wav",
+    "sha256": "3dcd482aee973e72ab1eb91584e514dd4b4564bd09413083ab342a255c9ae389",
+    "reference": "हाँ ડૉક્ટર મેહતા એપોઇન્ટમેન્ટ ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-024",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-024.wav",
+    "sha256": "db894ce41cbdbacad272a7ada070a5d73e91d02606b4808fa7fc30b3ebeae9e6",
+    "reference": "हद તારીખ વીસમી અરે, થોડીવાર રાહ જુઓ પાર્કિંગ ઉપલબ્ધ છે શર્મા ક્લિનિક મારું નામ પટેલ છે સોમવારથી શનિવાર।"
+  },
+  {
+    "sample_id": "gu-025",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-025.wav",
+    "sha256": "34455fb63a97b8dca89efd4aee565a5bb18c5f6d25c700faadfc8d9bef357ec6",
+    "reference": "um, અરે, થોડીવાર રાહ જુઓ હા, બરાબર મારું નામ પટેલ છે શર્મા ક્લિનિક।"
+  },
+  {
+    "sample_id": "gu-026",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-026.wav",
+    "sha256": "391af427664bd85046bb04c472a6f2cd74ea2c866955725be5b5f7ddda45079d",
+    "reference": "શર્મા ક્લિનિક સોમવારથી શનિવાર ફોન નંબર 9876543210 ફી પાંચસો રૂપિયા।"
+  },
+  {
+    "sample_id": "gu-027",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-027.wav",
+    "sha256": "be4d3b04e353f8a35e860f8aa8fa71955147eb09cc900ffb396fbb327672d7e9",
+    "reference": "हाँ અરે, થોડીવાર રાહ જુઓ સોમવારથી શનિવાર કાલે।"
+  },
+  {
+    "sample_id": "gu-028",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-028.wav",
+    "sha256": "e68efb3c0c38ea6d732d3a824040a275c19fc4c13d076b297d3a28a2b89ebeee",
+    "reference": "um, અરે, થોડીવાર રાહ જુઓ કાલે મારું નામ પટેલ છે।"
+  },
+  {
+    "sample_id": "gu-029",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-029.wav",
+    "sha256": "9e7f354824e78fc24162fb731833a2ad085b08819f0ceb22cfda3bca2c39f5ab",
+    "reference": "um, ફોન નંબર 9876543210 સોમવારથી શનિવાર એપોઇન્ટમેન્ટ સવારે દસ વાગ્યે અરે, થોડીવાર રાહ જુઓ પાર્કિંગ ઉપલબ્ધ છે।"
+  },
+  {
+    "sample_id": "gu-030",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-030.wav",
+    "sha256": "f8cc3d49849ad6cc1cbc22fcd1b497fc2e19e0c2d46f2509d7ed5f5cf363098b",
+    "reference": "हद સવારે દસ વાગ્યે સોમવારથી શનિવાર શર્મા ક્લિનિક ફોન નંબર 9876543210 ફી પાંચસો રૂપિયા એપોઇન્ટમેન્ટ।"
+  },
+  {
+    "sample_id": "gu-031",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-031.wav",
+    "sha256": "0f2450784ddd3d3f084c9a835013941c84dba367f616c6cf0ea1ac608a4f4b43",
+    "reference": "um, ઉધરસ અને તાવ ફોન નંબર 9876543210 સવારે દસ વાગ્યે અરે, થોડીવાર રાહ જુઓ હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-032",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-032.wav",
+    "sha256": "85477d57aa65cf95fdc2da18149605c8b7bbaee0ab2f97ef950b913cf3425c27",
+    "reference": "हाँ સોમવારથી શનિવાર ઉધરસ અને તાવ સવારે દસ વાગ્યે કાલે।"
+  },
+  {
+    "sample_id": "gu-033",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-033.wav",
+    "sha256": "b6e6a3faf65df830674d6fff49c0305468aab449c21f58cc03ec7157553a63ed",
+    "reference": "um, એપોઇન્ટમેન્ટ પાર્કિંગ ઉપલબ્ધ છે ડૉક્ટર મેહતા સોમવારથી શનિવાર શર્મા ક્લિનિક સવારે દસ વાગ્યે।"
+  },
+  {
+    "sample_id": "gu-034",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-034.wav",
+    "sha256": "ed3de914a4cfbc9084ea9ba151124abf06ac0b50537f9700cb4a99aba5d9b6f0",
+    "reference": "એપોઇન્ટમેન્ટ ફોન નંબર 9876543210 ઉધરસ અને તાવ કાલે સવારે દસ વાગ્યે હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-035",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-035.wav",
+    "sha256": "6e612e48c0d5c87ba98d2279e018455c98b02d1dae1782ca53881905a8d20172",
+    "reference": "um, ફી પાંચસો રૂપિયા શર્મા ક્લિનિક સોમવારથી શનિવાર પાર્કિંગ ઉપલબ્ધ છે હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-036",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-036.wav",
+    "sha256": "c3df99199d287872bf8fed4ba3d4e4facd12c2529c801e68423d43c33cd04a52",
+    "reference": "um, મારું નામ પટેલ છે ફોન નંબર 9876543210 શર્મા ક્લિનિક ફી પાંચસો રૂપિયા।"
+  },
+  {
+    "sample_id": "gu-037",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-037.wav",
+    "sha256": "1509fd1dcd8893e0d88f5723e7374b62fbd0d8151ff127b0463e7ba6521939dc",
+    "reference": "हद અરે, થોડીવાર રાહ જુઓ ઉધરસ અને તાવ તારીખ વીસમી સોમવારથી શનિવાર।"
+  },
+  {
+    "sample_id": "gu-038",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-038.wav",
+    "sha256": "7cf7aea44732a2ffded63c412ab1d6981ff008b72d371c59626d60002e527d1c",
+    "reference": "हाँ પાર્કિંગ ઉપલબ્ધ છે સોમવારથી શનિવાર ફી પાંચસો રૂપિયા।"
+  },
+  {
+    "sample_id": "gu-039",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-039.wav",
+    "sha256": "5358fd932ab0c967c2cdd10d203bedd308fc78945932ee0b14fadc81043a6181",
+    "reference": "हद એપોઇન્ટમેન્ટ મારું નામ પટેલ છે શર્મા ક્લિનિક।"
+  },
+  {
+    "sample_id": "gu-040",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-040.wav",
+    "sha256": "724cd6a28d39edd023a42941f5b63d29d4145b28e481392eb5b6e0714eb1fac0",
+    "reference": "um, સોમવારથી શનિવાર મારું નામ પટેલ છે કાલે ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-041",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-041.wav",
+    "sha256": "84ae191d8fae47e35edf85ac470aadb3135c8a60ed3bf4e50c130a2522dcfd8c",
+    "reference": "हद સોમવારથી શનિવાર શર્મા ક્લિનિક અરે, થોડીવાર રાહ જુઓ પાર્કિંગ ઉપલબ્ધ છે ઉધરસ અને તાવ।"
+  },
+  {
+    "sample_id": "gu-042",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-042.wav",
+    "sha256": "6b059734600d6a5967ae6f06224348d00f2464c4bc7964d20716666209f62b1d",
+    "reference": "अरे હા, બરાબર કાલે ઉધરસ અને તાવ ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-043",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-043.wav",
+    "sha256": "9a6103b6bd6ea138250e104af989fb715d036020aed75a1460aa57031c5d5399",
+    "reference": "अरे ફી પાંચસો રૂપિયા એપોઇન્ટમેન્ટ સોમવારથી શનિવાર હા, બરાબર સવારે દસ વાગ્યે મારું નામ પટેલ છે।"
+  },
+  {
+    "sample_id": "gu-044",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-044.wav",
+    "sha256": "0bfda4d77610c6c435932b8052a88d4bde136bd7a0b33160975efd2d8454e927",
+    "reference": "हद એપોઇન્ટમેન્ટ ઉધરસ અને તાવ તારીખ વીસમી હા, બરાબર।"
+  },
+  {
+    "sample_id": "gu-045",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-045.wav",
+    "sha256": "75268f816e30f4948536e002f16fe38885906f3aa698da52a97c58d3c2e66c81",
+    "reference": "हद ડૉક્ટર મેહતા કાલે મારું નામ પટેલ છે ઉધરસ અને તાવ।"
+  },
+  {
+    "sample_id": "gu-046",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-046.wav",
+    "sha256": "649ab90be2ce8427a92f862ba77f3045d85de5ee2e642184dd46424849bb4733",
+    "reference": "अरे ઉધરસ અને તાવ કાલે હા, બરાબર ફોન નંબર 9876543210 પાર્કિંગ ઉપલબ્ધ છે ફી પાંચસો રૂપિયા।"
+  },
+  {
+    "sample_id": "gu-047",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-047.wav",
+    "sha256": "cf4579bc737cc84fb6b79eb7a971032b75cd4bac6fc883a261684bb89480f8af",
+    "reference": "um, ઉધરસ અને તાવ હા, બરાબર મારું નામ પટેલ છે કાલે સોમવારથી શનિવાર।"
+  },
+  {
+    "sample_id": "gu-048",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-048.wav",
+    "sha256": "f98c6ba23c02ebcb13b8f09749f9455203f14d0ec6d20eedcdd83d6eaed93b95",
+    "reference": "um, ઉધરસ અને તાવ શર્મા ક્લિનિક સવારે દસ વાગ્યે ડૉક્ટર મેહતા।"
+  },
+  {
+    "sample_id": "gu-049",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-049.wav",
+    "sha256": "e9f2d1b135499072583acf69d2f13a04c7a1af0e9fdca5d31c21a5b2c4ce7339",
+    "reference": "हाँ ડૉક્ટર મેહતા હા, બરાબર કાલે।"
+  },
+  {
+    "sample_id": "gu-050",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-050.wav",
+    "sha256": "18f1fe63f258952710508cf196cb9d7a3fcc72aa66e004fae7c48579a0b7e672",
+    "reference": "अरे પાર્કિંગ ઉપલબ્ધ છે તારીખ વીસમી સવારે દસ વાગ્યે ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-051",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-051.wav",
+    "sha256": "f4240135fe20daaa6977e4d06b02d9d44057a0a9f6fb016169479a40c2be04c1",
+    "reference": "हाँ સોમવારથી શનિવાર તારીખ વીસમી એપોઇન્ટમેન્ટ પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-052",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-052.wav",
+    "sha256": "e61986c557fbbae863ea4ee1f8b508d3b138cf1770f7b2d714125e8534a18531",
+    "reference": "हद અરે, થોડીવાર રાહ જુઓ તારીખ વીસમી ઉધરસ અને તાવ।"
+  },
+  {
+    "sample_id": "gu-053",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-053.wav",
+    "sha256": "3c683087f475af0095a86762908f9ba022ba2d2a782998da876657986776b3a6",
+    "reference": "हद શર્મા ક્લિનિક પાર્કિંગ ઉપલબ્ધ છે સોમવારથી શનિવાર મારું નામ પટેલ છે સવારે દસ વાગ્યે।"
+  },
+  {
+    "sample_id": "gu-054",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-054.wav",
+    "sha256": "0ac1239bc9513ae2b818a452467f2171b75310edb352b736a88e13bc959f6bee",
+    "reference": "अरे સવારે દસ વાગ્યે કાલે અરે, થોડીવાર રાહ જુઓ સોમવારથી શનિવાર।"
+  },
+  {
+    "sample_id": "gu-055",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-055.wav",
+    "sha256": "6a91e4843fe9c5c5d05767f7fe901d4cf23c34c4dcf6e01ecbd80e9ac16d1555",
+    "reference": "अरे કાલે અરે, થોડીવાર રાહ જુઓ મારું નામ પટેલ છે।"
+  },
+  {
+    "sample_id": "gu-056",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-056.wav",
+    "sha256": "68620f7f8403e75837b7876b2ec471eaac72397158f98209d52397ef080697dd",
+    "reference": "अरे ફી પાંચસો રૂપિયા એપોઇન્ટમેન્ટ ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-057",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-057.wav",
+    "sha256": "354ed3cd711674416ebba8ec9f1558e17aced80300e011b17f06fe3e687ec685",
+    "reference": "ફી પાંચસો રૂપિયા સવારે દસ વાગ્યે કાલે પાર્કિંગ ઉપલબ્ધ છે ફોન નંબર 9876543210।"
+  },
+  {
+    "sample_id": "gu-058",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-058.wav",
+    "sha256": "dcee85371e0176f636985b4822d606c8673db744fba9de530c2d11f57b3f1b07",
+    "reference": "हाँ સવારે દસ વાગ્યે સોમવારથી શનિવાર શર્મા ક્લિનિક ડૉક્ટર મેહતા તારીખ વીસમી અરે, થોડીવાર રાહ જુઓ।"
+  },
+  {
+    "sample_id": "gu-059",
+    "language": "gu",
+    "audio_file": "eval/audio/gu-059.wav",
+    "sha256": "743e9f8cabd93e12b05084975d180a00b83799d890eedd4cb7a86e6026059576",
+    "reference": "um, એપોઇન્ટમેન્ટ ફી પાંચસો રૂપિયા પાર્કિંગ ઉપલબ્ધ છે તારીખ વીસમી મારું નામ પટેલ છે સવારે દસ વાગ્યે।"
+  },
+  {
+    "sample_id": "hi-000",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-000.wav",
+    "sha256": "7ba46d9050889f18e96ccc2575473208359401c4e69b799b52a6d8da4ae22279",
+    "reference": "हाँ सोमवार से शनिवार मेरा नाम पटेल है हाँ, ठीक है शुल्क पाँच सौ रुपये अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-001",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-001.wav",
+    "sha256": "b95bba8f81e68db5825c79615c01d735563a0abcf5e1f066ad25fa694b151726",
+    "reference": "अरे हाँ, ठीक है फ़ोन नंबर 9876543210 सोमवार से शनिवार डॉक्टर मेहता अरे, थोड़ा इंतज़ार कीजिए खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hi-002",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-002.wav",
+    "sha256": "622f2d031a62fd5af1c497df4964d12a9b542e0da8ddace46d6b0ca35a36b4b0",
+    "reference": "um, फ़ोन नंबर 9876543210 तारीख़ बीस डॉक्टर मेहता।"
+  },
+  {
+    "sample_id": "hi-003",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-003.wav",
+    "sha256": "e4d358757a2678d7a665e66d1111b1ea13124c39e2fa4ebb564436a7467496fe",
+    "reference": "um, डॉक्टर मेहता अरे, थोड़ा इंतज़ार कीजिए पार्किंग उपलब्ध है शुल्क पाँच सौ रुपये।"
+  },
+  {
+    "sample_id": "hi-004",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-004.wav",
+    "sha256": "11a9880188196ed43458eac3cd8b4397d1c1fd15451ed962345436d3723ecf97",
+    "reference": "हाँ शर्मा क्लिनिक अरे, थोड़ा इंतज़ार कीजिए फ़ोन नंबर 9876543210 मेरा नाम पटेल है तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-005",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-005.wav",
+    "sha256": "93d8d9dda0da2a3c3e3dda8555562135d5f120e45cc9f0f16227a9598be2556f",
+    "reference": "अपॉइंटमेंट अरे, थोड़ा इंतज़ार कीजिए मेरा नाम पटेल है सुबह दस बजे डॉक्टर मेहता फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-006",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-006.wav",
+    "sha256": "fecdd857abe4692b2d263f606f1d29a022bce5c0e7abc9684c597e6998c2f463",
+    "reference": "सुबह दस बजे हाँ, ठीक है डॉक्टर मेहता कल।"
+  },
+  {
+    "sample_id": "hi-007",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-007.wav",
+    "sha256": "2182bb4ff65ce9c6af572b06d559ed61a4d45c168a9555446d3d8e065060a03a",
+    "reference": "अरे खांसी और बुखार हाँ, ठीक है सोमवार से शनिवार शर्मा क्लिनिक सुबह दस बजे।"
+  },
+  {
+    "sample_id": "hi-008",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-008.wav",
+    "sha256": "97e7ef708627a7fe49f3940554d739ef6399e1267b04b38443e57d03f0571b97",
+    "reference": "um, तारीख़ बीस शुल्क पाँच सौ रुपये पार्किंग उपलब्ध है सोमवार से शनिवार मेरा नाम पटेल है अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-009",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-009.wav",
+    "sha256": "b40ff80e64a0ca60693580cb352434d47f77720a1c70b773975db1db33765100",
+    "reference": "हाँ शुल्क पाँच सौ रुपये खांसी और बुखार अरे, थोड़ा इंतज़ार कीजिए तारीख़ बीस सुबह दस बजे अपॉइंटमेंट।"
+  },
+  {
+    "sample_id": "hi-010",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-010.wav",
+    "sha256": "e83a3dc543cba757850c7e64678eef8aac51ba6b67dd5045f0929ea93afe6680",
+    "reference": "um, खांसी और बुखार मेरा नाम पटेल है सुबह दस बजे शुल्क पाँच सौ रुपये कल अपॉइंटमेंट।"
+  },
+  {
+    "sample_id": "hi-011",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-011.wav",
+    "sha256": "86d413c63dd671d0f36606ecd8553b4ec48d1d3725fc1e247f1e0788ca8e1ee1",
+    "reference": "um, अपॉइंटमेंट सुबह दस बजे हाँ, ठीक है खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hi-012",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-012.wav",
+    "sha256": "c5d4902962b5e2e91425264f44459df4886da9bbedbc8f1332f00d0c23945851",
+    "reference": "अरे कल तारीख़ बीस शुल्क पाँच सौ रुपये सुबह दस बजे अरे, थोड़ा इंतज़ार कीजिए फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-013",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-013.wav",
+    "sha256": "c02679399ae22fa0b91734c9e422db0a3d4d0b0941357a85ab29218b274be042",
+    "reference": "हद शर्मा क्लिनिक कल खांसी और बुखार अपॉइंटमेंट सोमवार से शनिवार तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-014",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-014.wav",
+    "sha256": "9a35efdaffb0ecc36088924b7a82b023328c05a3fe0416762cc75c690d9a11a4",
+    "reference": "अरे शर्मा क्लिनिक अपॉइंटमेंट मेरा नाम पटेल है सुबह दस बजे कल तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-015",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-015.wav",
+    "sha256": "0e1152f6bb3ae4dc8a77589d74d48514f9291a4768ac298ea7534d25407852e7",
+    "reference": "हाँ अपॉइंटमेंट फ़ोन नंबर 9876543210 शुल्क पाँच सौ रुपये हाँ, ठीक है।"
+  },
+  {
+    "sample_id": "hi-016",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-016.wav",
+    "sha256": "3788fd3c4092aae762991275be7f2e96c42f235dbbda9948fa570a0b7adf5f86",
+    "reference": "हाँ कल अपॉइंटमेंट सुबह दस बजे अरे, थोड़ा इंतज़ार कीजिए फ़ोन नंबर 9876543210 हाँ, ठीक है।"
+  },
+  {
+    "sample_id": "hi-017",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-017.wav",
+    "sha256": "b5f1f51f8b745dccedfc31986e2d2d043b1e8fdf1a43ba33255e273c13daba75",
+    "reference": "मेरा नाम पटेल है पार्किंग उपलब्ध है खांसी और बुखार कल सोमवार से शनिवार सुबह दस बजे।"
+  },
+  {
+    "sample_id": "hi-018",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-018.wav",
+    "sha256": "06f83470411807169638482d0280fca6af554ec2e58c3dab958434e7440addf8",
+    "reference": "हद पार्किंग उपलब्ध है सुबह दस बजे खांसी और बुखार फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-019",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-019.wav",
+    "sha256": "c596b2984d556b11a3ab0a67f66b101566475537134aef65a0849baffd8d72f0",
+    "reference": "अरे कल खांसी और बुखार फ़ोन नंबर 9876543210 मेरा नाम पटेल है अरे, थोड़ा इंतज़ार कीजिए सुबह दस बजे।"
+  },
+  {
+    "sample_id": "hi-020",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-020.wav",
+    "sha256": "0cdd14987a7780f70579e849f03c431e101c832139db7352bfb0592e2240b8c1",
+    "reference": "um, शुल्क पाँच सौ रुपये सोमवार से शनिवार डॉक्टर मेहता पार्किंग उपलब्ध है।"
+  },
+  {
+    "sample_id": "hi-021",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-021.wav",
+    "sha256": "d97020f1456150fa10fda12591f093246689ac1c5d5505de672a28774ff38ef0",
+    "reference": "सोमवार से शनिवार अपॉइंटमेंट डॉक्टर मेहता कल हाँ, ठीक है तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-022",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-022.wav",
+    "sha256": "712abf4ec801a452a3c56c8238445ca96ba199ff59d673d7a160817e2fc51f09",
+    "reference": "हाँ शुल्क पाँच सौ रुपये अरे, थोड़ा इंतज़ार कीजिए मेरा नाम पटेल है।"
+  },
+  {
+    "sample_id": "hi-023",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-023.wav",
+    "sha256": "f8a37ffa63b892018518a7eeca1fd22367e6ee9f2c08cfa4a1808e2db2c09107",
+    "reference": "um, अपॉइंटमेंट तारीख़ बीस शर्मा क्लिनिक।"
+  },
+  {
+    "sample_id": "hi-024",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-024.wav",
+    "sha256": "a98f7b959b10c81a29685dfe27378fea8c19806d4154f226151edf7144834c2a",
+    "reference": "हद अपॉइंटमेंट खांसी और बुखार शर्मा क्लिनिक।"
+  },
+  {
+    "sample_id": "hi-025",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-025.wav",
+    "sha256": "fc259ad0b9a2c37893f32e4ad3f75c2b367bf0f8c20d222c147638ae1bfa820e",
+    "reference": "हाँ, ठीक है शर्मा क्लिनिक सोमवार से शनिवार।"
+  },
+  {
+    "sample_id": "hi-026",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-026.wav",
+    "sha256": "b51372edf39239bc8e265ac1e4637a4eaa30df062c242fca22ac0cbc115dae72",
+    "reference": "हद तारीख़ बीस पार्किंग उपलब्ध है शर्मा क्लिनिक कल फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-027",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-027.wav",
+    "sha256": "5654b40fee8573985dad09f2d6c82f5d0cd2458002885f5f7686e0ff55e9fe1e",
+    "reference": "शुल्क पाँच सौ रुपये अपॉइंटमेंट तारीख़ बीस मेरा नाम पटेल है खांसी और बुखार कल।"
+  },
+  {
+    "sample_id": "hi-028",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-028.wav",
+    "sha256": "e2965af159688cf52bbfbba2932ea5bca17a71ce2aaf24e68a37657d1735d667",
+    "reference": "हाँ फ़ोन नंबर 9876543210 शर्मा क्लिनिक खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hi-029",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-029.wav",
+    "sha256": "ad17ccaa6ada2b7ac36f0f8123126fca139a9579e4bb3070800d63d20419b81e",
+    "reference": "हाँ मेरा नाम पटेल है अपॉइंटमेंट शर्मा क्लिनिक।"
+  },
+  {
+    "sample_id": "hi-030",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-030.wav",
+    "sha256": "f03bff2a0d8caf70a6ad3bf9c1d12da6dc9f2d951e816e2ffd06dfc15444ec91",
+    "reference": "डॉक्टर मेहता सोमवार से शनिवार हाँ, ठीक है अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-031",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-031.wav",
+    "sha256": "3ba8748d8568088cc41361482bef851e05aeb879733744c92e373dabdd3b01aa",
+    "reference": "खांसी और बुखार शर्मा क्लिनिक मेरा नाम पटेल है।"
+  },
+  {
+    "sample_id": "hi-032",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-032.wav",
+    "sha256": "3da22983602cdecf4ecb60e3cd19bbd42ceabd05cd5eefa664255ad7501c9dbf",
+    "reference": "पार्किंग उपलब्ध है शुल्क पाँच सौ रुपये सोमवार से शनिवार खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hi-033",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-033.wav",
+    "sha256": "cd7ea89617f5dedbdf189d5f441cc7c86512310a6a8c6fde0c98e571a76903c1",
+    "reference": "शुल्क पाँच सौ रुपये तारीख़ बीस शर्मा क्लिनिक।"
+  },
+  {
+    "sample_id": "hi-034",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-034.wav",
+    "sha256": "fb4f9e778d6a352df6e896748b0d4546e000f7812061ace8fd6c82d833813b6a",
+    "reference": "um, शर्मा क्लिनिक अपॉइंटमेंट कल खांसी और बुखार सोमवार से शनिवार शुल्क पाँच सौ रुपये।"
+  },
+  {
+    "sample_id": "hi-035",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-035.wav",
+    "sha256": "46947d3e4d769cf81733c403451b59a687b174da6a8a8bc111a35f1a3c5bf426",
+    "reference": "um, सुबह दस बजे अपॉइंटमेंट डॉक्टर मेहता शुल्क पाँच सौ रुपये शर्मा क्लिनिक।"
+  },
+  {
+    "sample_id": "hi-036",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-036.wav",
+    "sha256": "ca993e019423b33de6959d93ab3e9321f335049ff7e231d6fe89d26277e653c1",
+    "reference": "हद सोमवार से शनिवार तारीख़ बीस हाँ, ठीक है।"
+  },
+  {
+    "sample_id": "hi-037",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-037.wav",
+    "sha256": "e2be582b2b7bb510a91c151bca3c50a1a5ace42d5d3c18c1288d6a7c04d79f30",
+    "reference": "हद डॉक्टर मेहता मेरा नाम पटेल है कल शर्मा क्लिनिक अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-038",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-038.wav",
+    "sha256": "7de34311bae828b8ff3dc0c059bc423251bd689ab863ebf007e0bfc80de9f89a",
+    "reference": "हद अपॉइंटमेंट पार्किंग उपलब्ध है कल खांसी और बुखार सुबह दस बजे तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-039",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-039.wav",
+    "sha256": "31acba2a6da1ea5ebdb74bd0bca32a3b842df27290cecc145fce93d05e291c23",
+    "reference": "हद तारीख़ बीस शुल्क पाँच सौ रुपये खांसी और बुखार अपॉइंटमेंट फ़ोन नंबर 9876543210 अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-040",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-040.wav",
+    "sha256": "ec316784f8385d447dad03b56fa16763528be841c8c895a66acf27709da40d77",
+    "reference": "um, हाँ, ठीक है शर्मा क्लिनिक अरे, थोड़ा इंतज़ार कीजिए डॉक्टर मेहता फ़ोन नंबर 9876543210 सोमवार से शनिवार।"
+  },
+  {
+    "sample_id": "hi-041",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-041.wav",
+    "sha256": "487315e50479eb887ef13a86f64d4945d7e4956efc11641f5392f4a4c41aa462",
+    "reference": "डॉक्टर मेहता पार्किंग उपलब्ध है तारीख़ बीस शुल्क पाँच सौ रुपये सोमवार से शनिवार फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-042",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-042.wav",
+    "sha256": "3a841a340a64413e02c5ce568899537eda888f53628911e55a370bcd783ce948",
+    "reference": "um, फ़ोन नंबर 9876543210 तारीख़ बीस अरे, थोड़ा इंतज़ार कीजिए।"
+  },
+  {
+    "sample_id": "hi-043",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-043.wav",
+    "sha256": "924a2dfe627d807a52af151c51cd32fa5ef43115b7bbf0e33a9a24c83f809313",
+    "reference": "अरे, थोड़ा इंतज़ार कीजिए डॉक्टर मेहता कल तारीख़ बीस मेरा नाम पटेल है अपॉइंटमेंट।"
+  },
+  {
+    "sample_id": "hi-044",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-044.wav",
+    "sha256": "95eeeb8f0ba1b9aa5982a826c9162ef2a7ef575700eece1c63c9ddab9dd54c29",
+    "reference": "अरे फ़ोन नंबर 9876543210 डॉक्टर मेहता सोमवार से शनिवार तारीख़ बीस हाँ, ठीक है।"
+  },
+  {
+    "sample_id": "hi-045",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-045.wav",
+    "sha256": "c8a8ecd5b7ee3c77791d864bcfbef93d70ad9e0cd3a6f9018fc5b4b7f2f90565",
+    "reference": "हाँ फ़ोन नंबर 9876543210 शुल्क पाँच सौ रुपये कल अरे, थोड़ा इंतज़ार कीजिए अपॉइंटमेंट हाँ, ठीक है।"
+  },
+  {
+    "sample_id": "hi-046",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-046.wav",
+    "sha256": "66a348400a95b930cc0fdbc565f3625ff9674966634b2c1c640a14b87c3a5726",
+    "reference": "सुबह दस बजे अरे, थोड़ा इंतज़ार कीजिए पार्किंग उपलब्ध है फ़ोन नंबर 9876543210 मेरा नाम पटेल है शुल्क पाँच सौ रुपये।"
+  },
+  {
+    "sample_id": "hi-047",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-047.wav",
+    "sha256": "7ff273938696e4417e5c37b13121223a31e1b69e6c335dadf33b666013b3f96e",
+    "reference": "um, अपॉइंटमेंट शुल्क पाँच सौ रुपये खांसी और बुखार डॉक्टर मेहता कल।"
+  },
+  {
+    "sample_id": "hi-048",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-048.wav",
+    "sha256": "62846f76006f8369ea2791490d853870eb321dda9bdba5440cb186267c302c71",
+    "reference": "हाँ सुबह दस बजे अपॉइंटमेंट पार्किंग उपलब्ध है सोमवार से शनिवार तारीख़ बीस शुल्क पाँच सौ रुपये।"
+  },
+  {
+    "sample_id": "hi-049",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-049.wav",
+    "sha256": "3d29819501c6854fc3fbbaeb58b745d943ea75df3e5012c2749e80441af81c5e",
+    "reference": "हाँ खांसी और बुखार कल शुल्क पाँच सौ रुपये फ़ोन नंबर 9876543210।"
+  },
+  {
+    "sample_id": "hi-050",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-050.wav",
+    "sha256": "17bb8ea24179bc1f7c8c97ed2d09620ef78335d6bd2a2b5dd55550ea38167123",
+    "reference": "शुल्क पाँच सौ रुपये खांसी और बुखार कल मेरा नाम पटेल है।"
+  },
+  {
+    "sample_id": "hi-051",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-051.wav",
+    "sha256": "e121c660d8e0c59f02bb37aa01d66c6c1c8574c2b388825494fa90afba69da4a",
+    "reference": "अरे कल पार्किंग उपलब्ध है फ़ोन नंबर 9876543210 हाँ, ठीक है सोमवार से शनिवार खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hi-052",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-052.wav",
+    "sha256": "7785a856e7d0d73136ef6b5322e97d90a1462fef2fc9c30797d5dfb05cb13538",
+    "reference": "हाँ मेरा नाम पटेल है पार्किंग उपलब्ध है सोमवार से शनिवार।"
+  },
+  {
+    "sample_id": "hi-053",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-053.wav",
+    "sha256": "a7adce439190a81237eca44aa9ca2bf1b655b1381e43bef63646ab63587e1b97",
+    "reference": "हाँ कल डॉक्टर मेहता तारीख़ बीस।"
+  },
+  {
+    "sample_id": "hi-054",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-054.wav",
+    "sha256": "203a6ec356f9b2c33273682448b6a4dc7852d04878e92d3795d4174f4e184f7b",
+    "reference": "हाँ सुबह दस बजे डॉक्टर मेहता अरे, थोड़ा इंतज़ार कीजिए अपॉइंटमेंट।"
+  },
+  {
+    "sample_id": "hi-055",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-055.wav",
+    "sha256": "4058ca96fecabd8dcc1ff73315fdcf816642a3b6f09be8b97a8de5921cf56a7a",
+    "reference": "पार्किंग उपलब्ध है डॉक्टर मेहता कल।"
+  },
+  {
+    "sample_id": "hi-056",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-056.wav",
+    "sha256": "00621495c354fbf43317909a6454af21f2073ea0a6c5523cdbbec51595903919",
+    "reference": "um, शुल्क पाँच सौ रुपये मेरा नाम पटेल है शर्मा क्लिनिक अपॉइंटमेंट सोमवार से शनिवार डॉक्टर मेहता।"
+  },
+  {
+    "sample_id": "hi-057",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-057.wav",
+    "sha256": "9f8beb17c31d5a4e51b0668c6313c818c1e230337000d23405ce8abd9bc9789c",
+    "reference": "अरे शर्मा क्लिनिक तारीख़ बीस डॉक्टर मेहता शुल्क पाँच सौ रुपये कल।"
+  },
+  {
+    "sample_id": "hi-058",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-058.wav",
+    "sha256": "f44bdd517db5a1608cd7b7cfae62de7bb7e05b2b04e019a37b26b4c2a1bc1df7",
+    "reference": "अरे फ़ोन नंबर 9876543210 कल डॉक्टर मेहता खांसी और बुखार अपॉइंटमेंट।"
+  },
+  {
+    "sample_id": "hi-059",
+    "language": "hi",
+    "audio_file": "eval/audio/hi-059.wav",
+    "sha256": "7988add80d6314ebde7a83fbd9d6a9975b7490a828f47de13e41ee293c13e98e",
+    "reference": "हाँ हाँ, ठीक है सोमवार से शनिवार शुल्क पाँच सौ रुपये सुबह दस बजे पार्किंग उपलब्ध है खांसी और बुखार।"
+  },
+  {
+    "sample_id": "hinglish-000",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-000.wav",
+    "sha256": "5a2221d364975e3c98e6948b870038b432feba3a711ae5394a89a7b9e73c8d54",
+    "reference": "अरे my name is Patel appointment Dr Mehta parking available hai."
+  },
+  {
+    "sample_id": "hinglish-001",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-001.wav",
+    "sha256": "a99f42b89492ffa486405e3f35c387eba5e3759c5555c52c96b87939798df920",
+    "reference": "हाँ haan, theek hai date 20 Monday to Saturday kal subah 10 baje phone 9876543210 Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-002",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-002.wav",
+    "sha256": "d515b58450500e3e81a6fca1305fc51c7bc21466fe2aff513e0357a07f3ca098",
+    "reference": "हाँ date 20 cough aur fever arey, thoda wait karo appointment."
+  },
+  {
+    "sample_id": "hinglish-003",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-003.wav",
+    "sha256": "545e7f5cfa80041eed05bdaba22fa2885b03dddeae34b7692386d7fcb55f343b",
+    "reference": "हाँ cough aur fever aaj arey, thoda wait karo fee 500 rupees."
+  },
+  {
+    "sample_id": "hinglish-004",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-004.wav",
+    "sha256": "6565ad47d0c6018e6b3b61b49f1a7bd94383c9df097260dd0b4600df0a34726f",
+    "reference": "अरे kal subah 10 baje date 20 Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-005",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-005.wav",
+    "sha256": "6516c31278d9954ef75a61c61846c35748a1d1274b347a3fde108d0ebb9c8674",
+    "reference": "arey, thoda wait karo fee 500 rupees Dr Mehta Sharma clinic appointment."
+  },
+  {
+    "sample_id": "hinglish-006",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-006.wav",
+    "sha256": "42e9c33fc8dc374448c1b52aa12bf3e9343d54499f6fbb30b71c67bfa61ef630",
+    "reference": "हाँ Monday to Saturday phone 9876543210 cough aur fever."
+  },
+  {
+    "sample_id": "hinglish-007",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-007.wav",
+    "sha256": "c5a9e7e1f7a2ae96ddc179fecfeaa823c7609aa47a92d4ba761cc7a858e2bdbc",
+    "reference": "kal subah 10 baje Monday to Saturday fee 500 rupees Sharma clinic."
+  },
+  {
+    "sample_id": "hinglish-008",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-008.wav",
+    "sha256": "fd0ed9425db67256d6138fcb9e78e060d871ba22af5cc817884c72acbb78a0cd",
+    "reference": "अरे Monday to Saturday kal subah 10 baje Sharma clinic."
+  },
+  {
+    "sample_id": "hinglish-009",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-009.wav",
+    "sha256": "549e2904333bc0a38086b38ac34245bc2ae747339fcd8bad6adb115a1d2bb29d",
+    "reference": "um, appointment my name is Patel Dr Mehta cough aur fever Monday to Saturday kal subah 10 baje."
+  },
+  {
+    "sample_id": "hinglish-010",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-010.wav",
+    "sha256": "366f3effe5ed68719097e0eedb9c70b0fc2bec78db090510d53e2e1612be5f91",
+    "reference": "Dr Mehta fee 500 rupees Monday to Saturday."
+  },
+  {
+    "sample_id": "hinglish-011",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-011.wav",
+    "sha256": "3d47ef042e0cedcf42f0bd9060678ecbf81bfe9416c8c7a0f97b4b07146a8614",
+    "reference": "Sharma clinic kal subah 10 baje my name is Patel haan, theek hai aaj date 20."
+  },
+  {
+    "sample_id": "hinglish-012",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-012.wav",
+    "sha256": "fc906fccddc6a7ae7c9dff80490ac6ed57106587ab6af5d3fdc1502454814df3",
+    "reference": "अरे date 20 cough aur fever Sharma clinic Monday to Saturday aaj my name is Patel."
+  },
+  {
+    "sample_id": "hinglish-013",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-013.wav",
+    "sha256": "dac39b8b564e2755bc443c2d15b42174c45589c3b1e2b21050b16a93226e97d8",
+    "reference": "हाँ arey, thoda wait karo Dr Mehta aaj my name is Patel parking available hai phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-014",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-014.wav",
+    "sha256": "bd98af98fc0023bbdf934d2b256d64cb7b18c09b52716098a0ac966b79c97c60",
+    "reference": "Sharma clinic haan, theek hai phone 9876543210 my name is Patel."
+  },
+  {
+    "sample_id": "hinglish-015",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-015.wav",
+    "sha256": "cd46a8716847b7bc76575ba1a6f488be5857c8b87ca775a68a2f57638315d3c0",
+    "reference": "हद arey, thoda wait karo Monday to Saturday cough aur fever aaj phone 9876543210 date 20."
+  },
+  {
+    "sample_id": "hinglish-016",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-016.wav",
+    "sha256": "059f41c06d9280336fd84a5e1f0ee44d87c63846d14ca5ce27bf2a7216f5d744",
+    "reference": "हद aaj Dr Mehta fee 500 rupees my name is Patel appointment."
+  },
+  {
+    "sample_id": "hinglish-017",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-017.wav",
+    "sha256": "469f8b81059918c97396714ee3acf83f86f6353a1c31634aa5e71a179472c4a3",
+    "reference": "हद fee 500 rupees Sharma clinic haan, theek hai my name is Patel."
+  },
+  {
+    "sample_id": "hinglish-018",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-018.wav",
+    "sha256": "05779a7ea27f617046890a4243e45a79fb0d78f87064f73b4c50e8156ba2bf10",
+    "reference": "arey, thoda wait karo my name is Patel appointment phone 9876543210 haan, theek hai fee 500 rupees."
+  },
+  {
+    "sample_id": "hinglish-019",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-019.wav",
+    "sha256": "4ca79e7e56690a1b9920ab7f570f706b8ce03f3f0bf390204419d6688f785c05",
+    "reference": "हद Monday to Saturday fee 500 rupees Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-020",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-020.wav",
+    "sha256": "188a2dd583fb52dc2395ccc1d2f97ad62ab400ebba1442716b1ca945aedede8b",
+    "reference": "हद Dr Mehta fee 500 rupees kal subah 10 baje Monday to Saturday aaj."
+  },
+  {
+    "sample_id": "hinglish-021",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-021.wav",
+    "sha256": "3583a0d1e9ae81e25c1c5dfc488f60360f45706f05e8023b59e97f324f99985d",
+    "reference": "हद date 20 phone 9876543210 appointment arey, thoda wait karo."
+  },
+  {
+    "sample_id": "hinglish-022",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-022.wav",
+    "sha256": "2fe108daabda76eb784513e10b6c8812c0c638ccaf99c3389e10f4a9bdeb76ec",
+    "reference": "हद kal subah 10 baje date 20 my name is Patel."
+  },
+  {
+    "sample_id": "hinglish-023",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-023.wav",
+    "sha256": "eb1468092734c56ea6021060133cbf11c2fb8152dc0883bd4ccc69e610a18d90",
+    "reference": "अरे haan, theek hai kal subah 10 baje fee 500 rupees Monday to Saturday my name is Patel cough aur fever."
+  },
+  {
+    "sample_id": "hinglish-024",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-024.wav",
+    "sha256": "adbcf2b1c951efcc5baebb88680ec86948c62c3ed287afc2c22f68da657b7e04",
+    "reference": "अरे appointment fee 500 rupees arey, thoda wait karo cough aur fever kal subah 10 baje phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-025",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-025.wav",
+    "sha256": "39fa36a80435666a8e66b40d077760469b5edee3d4a5c7d52588dd03a7958e56",
+    "reference": "हद aaj my name is Patel date 20."
+  },
+  {
+    "sample_id": "hinglish-026",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-026.wav",
+    "sha256": "055c42fab76fc92915328482b0e7ed78cc56021189ab07fb8c134ec8e0cebdcc",
+    "reference": "हद appointment cough aur fever phone 9876543210 parking available hai Dr Mehta aaj."
+  },
+  {
+    "sample_id": "hinglish-027",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-027.wav",
+    "sha256": "715e3514ad9c177fbc8b0556248973b733931e34830a1621ceca73522d1f2b45",
+    "reference": "अरे Dr Mehta appointment aaj phone 9876543210 my name is Patel."
+  },
+  {
+    "sample_id": "hinglish-028",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-028.wav",
+    "sha256": "d277103be936a28b29c5263b9c8cffb6f37d4733ec659e8d194519e4bb787c9a",
+    "reference": "um, my name is Patel phone 9876543210 aaj cough aur fever."
+  },
+  {
+    "sample_id": "hinglish-029",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-029.wav",
+    "sha256": "01e7383866d37bb906197df4f88b8c71af8f490bbb820030de4b6233ca360a9b",
+    "reference": "अरे cough aur fever aaj parking available hai date 20."
+  },
+  {
+    "sample_id": "hinglish-030",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-030.wav",
+    "sha256": "1dda500a16581d39b11e6fdda1007fa749b8781e01783ae68c685a6158dcb968",
+    "reference": "um, arey, thoda wait karo phone 9876543210 aaj parking available hai appointment."
+  },
+  {
+    "sample_id": "hinglish-031",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-031.wav",
+    "sha256": "b5811b2d3fa2ca439245d24d153530212e4b988035edd8c09d380cdc9eb287f5",
+    "reference": "kal subah 10 baje Sharma clinic Dr Mehta date 20 parking available hai phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-032",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-032.wav",
+    "sha256": "dd15828ea9d7fadef283e1263e4889691130f272f657d137c1596e9277275952",
+    "reference": "date 20 Sharma clinic appointment parking available hai."
+  },
+  {
+    "sample_id": "hinglish-033",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-033.wav",
+    "sha256": "98e796d104eb4871c27a46c349c1581c4f77515f33776504437704412366969f",
+    "reference": "aaj haan, theek hai Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-034",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-034.wav",
+    "sha256": "b38d2233ffc839bc4b0ddf814fa227fa089ab7bca33d5b7a9523c26d3cbea82d",
+    "reference": "अरे fee 500 rupees date 20 phone 9876543210 my name is Patel haan, theek hai."
+  },
+  {
+    "sample_id": "hinglish-035",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-035.wav",
+    "sha256": "cc8c6767f75f27a6814a9dbfccbcc2619edd5b41c0e7199a040efe0c3829458c",
+    "reference": "fee 500 rupees Dr Mehta Sharma clinic cough aur fever Monday to Saturday haan, theek hai."
+  },
+  {
+    "sample_id": "hinglish-036",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-036.wav",
+    "sha256": "9d9b0b4550f6aa90fc24b892356841b7c20b144770b9fe688224b3a1c316e605",
+    "reference": "हद cough aur fever my name is Patel parking available hai fee 500 rupees Sharma clinic."
+  },
+  {
+    "sample_id": "hinglish-037",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-037.wav",
+    "sha256": "99448eb539b6c78cd0fd7b6e7ff15c287972950a7f064c0d2d6a911ebbd6a7fd",
+    "reference": "हाँ Sharma clinic Dr Mehta date 20 haan, theek hai arey, thoda wait karo phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-038",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-038.wav",
+    "sha256": "1d461a6a335a2842e45e2d659053b0a2c6cb4b0446d243e1f8fb9055e3564e03",
+    "reference": "हाँ Sharma clinic date 20 appointment arey, thoda wait karo."
+  },
+  {
+    "sample_id": "hinglish-039",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-039.wav",
+    "sha256": "761311a8132492b2187b92a9de4d3454a0e49d24ede5f4c791aec9f5374a216c",
+    "reference": "हद haan, theek hai parking available hai appointment phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-040",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-040.wav",
+    "sha256": "074776205129c6c5a89ff871a1549f9f8aa0dfc1628f96763c298403b019e14e",
+    "reference": "हाँ kal subah 10 baje my name is Patel haan, theek hai Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-041",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-041.wav",
+    "sha256": "af0c9aaa1d4f52abaca81dbada9fb5b33d7217a9fc12e4b7c991ad032606251f",
+    "reference": "हाँ phone 9876543210 appointment date 20 my name is Patel fee 500 rupees."
+  },
+  {
+    "sample_id": "hinglish-042",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-042.wav",
+    "sha256": "7e8f1b7e507bea65d04cecc9b11c8c5f6489925cc77a6cedb1c4889e45d0e461",
+    "reference": "Monday to Saturday phone 9876543210 Sharma clinic date 20 haan, theek hai cough aur fever."
+  },
+  {
+    "sample_id": "hinglish-043",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-043.wav",
+    "sha256": "3044296b0b3f4cd3adf3a8c94f10a4e008aa59fbc1cd626766af88a9ac2aefd4",
+    "reference": "अरे appointment phone 9876543210 haan, theek hai aaj Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-044",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-044.wav",
+    "sha256": "a016bd53c594bca90708e0b8eaaf52abb58073a2c6a2d99e45b9bc12016bc157",
+    "reference": "my name is Patel Dr Mehta arey, thoda wait karo."
+  },
+  {
+    "sample_id": "hinglish-045",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-045.wav",
+    "sha256": "44181807d10d48a1f96bb1764748b902539bc43d0b901e64e7967b4778c08433",
+    "reference": "हाँ my name is Patel arey, thoda wait karo Sharma clinic haan, theek hai."
+  },
+  {
+    "sample_id": "hinglish-046",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-046.wav",
+    "sha256": "b169069e89cdcdc4242c238e66f6920cbe9def2838106313023f7c6e549a4c45",
+    "reference": "हाँ aaj arey, thoda wait karo Sharma clinic."
+  },
+  {
+    "sample_id": "hinglish-047",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-047.wav",
+    "sha256": "1d278f0502045acee987290a821227f8aa96f3b80c901e38a3e26287ed01c82d",
+    "reference": "Sharma clinic my name is Patel date 20 arey, thoda wait karo phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-048",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-048.wav",
+    "sha256": "6cac31f3320e167138e62c3cc36f3fbfccd1ce357314a29cd5a45c56940b52c8",
+    "reference": "um, cough aur fever appointment Dr Mehta kal subah 10 baje Monday to Saturday."
+  },
+  {
+    "sample_id": "hinglish-049",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-049.wav",
+    "sha256": "dfebcb511a5adabd66d50b79082de6428c0f1f707dce35ce21806d3545a418e0",
+    "reference": "हाँ date 20 my name is Patel Monday to Saturday arey, thoda wait karo."
+  },
+  {
+    "sample_id": "hinglish-050",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-050.wav",
+    "sha256": "3deb3dc06f473d800d151979e0c847c60902050cc684015a95776fb5b1824f0b",
+    "reference": "arey, thoda wait karo Sharma clinic my name is Patel Monday to Saturday Dr Mehta date 20."
+  },
+  {
+    "sample_id": "hinglish-051",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-051.wav",
+    "sha256": "9109f87560ebc9472b6d208ff08aee25875d3314e37a0e0247a82f45e527ebe1",
+    "reference": "um, Monday to Saturday kal subah 10 baje arey, thoda wait karo Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-052",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-052.wav",
+    "sha256": "200212c385c8b53c312577488394ed6a75ac59d6fc1b7381a416a15d3d9a0521",
+    "reference": "हाँ date 20 cough aur fever parking available hai my name is Patel Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-053",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-053.wav",
+    "sha256": "256b51500e1200ab10e59c5528e92fbd94a6aabd6a3ef2126cbe687280ca515a",
+    "reference": "parking available hai Dr Mehta cough aur fever arey, thoda wait karo aaj."
+  },
+  {
+    "sample_id": "hinglish-054",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-054.wav",
+    "sha256": "858f4203a3717faa2e89e8bc80bf7d7fe48482ad5358cf7ac1d407cd3613845a",
+    "reference": "Monday to Saturday fee 500 rupees cough aur fever phone 9876543210 Dr Mehta."
+  },
+  {
+    "sample_id": "hinglish-055",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-055.wav",
+    "sha256": "7a61009f5cd9d13741a8e0bfdc751517a9a12e73150a82b5a2ac456ce9ad962a",
+    "reference": "Monday to Saturday aaj fee 500 rupees date 20 phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-056",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-056.wav",
+    "sha256": "5090fcd90e05dfacf132f50ae5eff7fa7e9094e554b8fd19cd11e74ffd3bbdf9",
+    "reference": "हद appointment Sharma clinic Dr Mehta Monday to Saturday arey, thoda wait karo phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-057",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-057.wav",
+    "sha256": "23afb38d6f37d14586f874b05c5452579a918a57b13709ba0b8826c3bc4b6d61",
+    "reference": "अरे appointment phone 9876543210 Dr Mehta my name is Patel Sharma clinic date 20."
+  },
+  {
+    "sample_id": "hinglish-058",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-058.wav",
+    "sha256": "e7a5be7f723cb5b1185bf123ffccb7649958144222efd4b89dd5b726b6c8d3a8",
+    "reference": "हाँ kal subah 10 baje aaj my name is Patel date 20 arey, thoda wait karo phone 9876543210."
+  },
+  {
+    "sample_id": "hinglish-059",
+    "language": "hinglish",
+    "audio_file": "eval/audio/hinglish-059.wav",
+    "sha256": "19610aeb13cc0717d6bdc4481d92cc378a7fcc8aabe45c24efaabff778672d87",
+    "reference": "हद appointment fee 500 rupees date 20 kal subah 10 baje."
+  },
+  {
+    "sample_id": "en-in-000",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-000.wav",
+    "sha256": "a7fcc786c0e247c95621deddc0f0bc79b7e63f47e3e01b83e18f46613bdfa91e",
+    "reference": "well, Monday to Saturday my name is Patel parking is available appointment Dr Mehta."
+  },
+  {
+    "sample_id": "en-in-001",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-001.wav",
+    "sha256": "e5096768f91bdf4ca35ad84b6b777d9ad507e4a25f88c447ad35cbb283bd81ae",
+    "reference": "well, Sharma clinic Dr Mehta parking is available my name is Patel."
+  },
+  {
+    "sample_id": "en-in-002",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-002.wav",
+    "sha256": "ba016277452045b26ba941100524049b07b04d8a4aeb0afae84ceb0672c52c77",
+    "reference": "um, Sharma clinic parking is available Dr Mehta my name is Patel phone number 9876543210."
+  },
+  {
+    "sample_id": "en-in-003",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-003.wav",
+    "sha256": "ac29f33db5e6977a203e438794b89d4085334c47686dca229cebf64980db393c",
+    "reference": "well, Dr Mehta um, just a moment please the twentieth cough and fever Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-004",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-004.wav",
+    "sha256": "51c846b2f673de66dabd45ad90568b65e193a6e2a8c4f378680c132f9d669e76",
+    "reference": "appointment Dr Mehta ten in the morning the twentieth."
+  },
+  {
+    "sample_id": "en-in-005",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-005.wav",
+    "sha256": "4251785449f6587fb293b5fecc7a80848885d343941ac72269cbea7a47c83165",
+    "reference": "well, phone number 9876543210 appointment Monday to Saturday yes, that's right my name is Patel fee five hundred rupees."
+  },
+  {
+    "sample_id": "en-in-006",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-006.wav",
+    "sha256": "d9cfb2e580fffa5f6e949adbc73b599f69e6774ccf7eed3188e0de59017642e3",
+    "reference": "well, ten in the morning fee five hundred rupees Sharma clinic my name is Patel."
+  },
+  {
+    "sample_id": "en-in-007",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-007.wav",
+    "sha256": "d9db556fe244ce029d30a962d7545aa2df1ccab673f84138a7f7cfbf2ef33516",
+    "reference": "well, Dr Mehta tomorrow parking is available the twentieth um, just a moment please ten in the morning."
+  },
+  {
+    "sample_id": "en-in-008",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-008.wav",
+    "sha256": "f41bdf292b1a5fd81b52e2836f24aa038674f44d4cf3654e6722c6903f616f03",
+    "reference": "my name is Patel fee five hundred rupees tomorrow."
+  },
+  {
+    "sample_id": "en-in-009",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-009.wav",
+    "sha256": "63c2f82f28d1d642f05221e961b57ebd4a3251a2d62392762d1d82b516b2d65d",
+    "reference": "the twentieth phone number 9876543210 Monday to Saturday tomorrow."
+  },
+  {
+    "sample_id": "en-in-010",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-010.wav",
+    "sha256": "e9dc3011b566ffd3c28e5d2efd39c9de4a8c513e548774cb9998f99bc4ebe459",
+    "reference": "Sharma clinic tomorrow parking is available appointment."
+  },
+  {
+    "sample_id": "en-in-011",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-011.wav",
+    "sha256": "7f43dfb7871d79eadc05c56d19df51602a4f5daefea8e3eaf548ef467832f45d",
+    "reference": "um, phone number 9876543210 the twentieth um, just a moment please Monday to Saturday parking is available fee five hundred rupees."
+  },
+  {
+    "sample_id": "en-in-012",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-012.wav",
+    "sha256": "c41442f682a07aeea68a97b56d76c749c2db430298b0d5e6dba0c5d84775f81a",
+    "reference": "appointment yes, that's right um, just a moment please."
+  },
+  {
+    "sample_id": "en-in-013",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-013.wav",
+    "sha256": "a27ee5b3d325f38259f92de2b1d1350c1fc99ad39c69d766109fc6f045708b4c",
+    "reference": "Sharma clinic yes, that's right cough and fever phone number 9876543210 um, just a moment please the twentieth."
+  },
+  {
+    "sample_id": "en-in-014",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-014.wav",
+    "sha256": "279078de8ec165f927f8d49adcbebe4c13fb386e33f9f191e7fd1b06b69ce398",
+    "reference": "the twentieth ten in the morning um, just a moment please Sharma clinic cough and fever parking is available."
+  },
+  {
+    "sample_id": "en-in-015",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-015.wav",
+    "sha256": "b41a2ec20e253f08f49fa740cdd30c6a47c88824fffe45b839a6535e514ef5ae",
+    "reference": "ten in the morning my name is Patel yes, that's right."
+  },
+  {
+    "sample_id": "en-in-016",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-016.wav",
+    "sha256": "87df0290eea324ed1b5cc8cd85c2c17ad2aa828a3f1a68e953d8eb5f688fcc13",
+    "reference": "well, the twentieth cough and fever ten in the morning fee five hundred rupees."
+  },
+  {
+    "sample_id": "en-in-017",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-017.wav",
+    "sha256": "442ccfe79c4fdfe62cbc8cb06e81e416d5154f554f55198324b5b88998289a5c",
+    "reference": "well, yes, that's right ten in the morning appointment fee five hundred rupees Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-018",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-018.wav",
+    "sha256": "0d76545a152b7980c2d9ebc0972d3b6948c9e16baa1ee6f07e461c7fe7e8b3a1",
+    "reference": "well, appointment phone number 9876543210 yes, that's right."
+  },
+  {
+    "sample_id": "en-in-019",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-019.wav",
+    "sha256": "b0a5e3d439cfab83e9c1656bc937cfaadea5d6d3719daeda8e67537444152d59",
+    "reference": "the twentieth my name is Patel um, just a moment please Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-020",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-020.wav",
+    "sha256": "e4ac93d716ec0a21a4beabb0ddce9c09ec8250c705f78e12d0ab8f75f3052d7c",
+    "reference": "well, phone number 9876543210 parking is available yes, that's right cough and fever the twentieth."
+  },
+  {
+    "sample_id": "en-in-021",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-021.wav",
+    "sha256": "62625560510c8a0446c2f450deec173a81a0e6bb0da6a069d4eae202f1cc14ce",
+    "reference": "um, Dr Mehta phone number 9876543210 cough and fever ten in the morning the twentieth tomorrow."
+  },
+  {
+    "sample_id": "en-in-022",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-022.wav",
+    "sha256": "fd9b924a87c5543bdd8db9a03ca777e443535867280d49075a047e8fb41e6974",
+    "reference": "well, phone number 9876543210 yes, that's right ten in the morning parking is available."
+  },
+  {
+    "sample_id": "en-in-023",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-023.wav",
+    "sha256": "f51e99879356fd2de6de9ebb67796d66f4dd7264a9319e38e288612b8116a65e",
+    "reference": "well, Dr Mehta phone number 9876543210 appointment um, just a moment please Sharma clinic Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-024",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-024.wav",
+    "sha256": "695f5d584d37949ee22b25fae16d71efeca0f299a933af31e7559476ffaf176e",
+    "reference": "Monday to Saturday um, just a moment please my name is Patel parking is available appointment cough and fever."
+  },
+  {
+    "sample_id": "en-in-025",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-025.wav",
+    "sha256": "906a4f8918e45a170dcea4f5b255cfde9931494d9efab4bc3059b5248b22cd48",
+    "reference": "tomorrow appointment the twentieth my name is Patel Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-026",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-026.wav",
+    "sha256": "d5c280b57d20bbfc7e64a438bab943d2e51a3da9aa8a5766f3e48003a79d686d",
+    "reference": "um, yes, that's right cough and fever um, just a moment please the twentieth Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-027",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-027.wav",
+    "sha256": "3f2360833c6609b02d7c9d96b3a493e8edb1d5e8cea87d48a4c80ab782459053",
+    "reference": "well, my name is Patel tomorrow Sharma clinic yes, that's right."
+  },
+  {
+    "sample_id": "en-in-028",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-028.wav",
+    "sha256": "f83a7b3663074c920004e8efd34904a118d316c70e138464468021108798efc3",
+    "reference": "um, the twentieth appointment cough and fever."
+  },
+  {
+    "sample_id": "en-in-029",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-029.wav",
+    "sha256": "198c69d9c97eeeba86cfa13c32d60f33b8a02ab3698b062c5fd15643ec7dfef2",
+    "reference": "Dr Mehta my name is Patel yes, that's right phone number 9876543210 Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-030",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-030.wav",
+    "sha256": "56a474b8ffa6f119bb4d1cee98c8f825561d3d05fad1c7982d7f0116a5aa08d7",
+    "reference": "well, Sharma clinic Monday to Saturday ten in the morning."
+  },
+  {
+    "sample_id": "en-in-031",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-031.wav",
+    "sha256": "f862fbc8d026f1f22f9851864f19a790e85f803cd89e53a8c884230328e589d8",
+    "reference": "parking is available appointment um, just a moment please cough and fever Dr Mehta."
+  },
+  {
+    "sample_id": "en-in-032",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-032.wav",
+    "sha256": "f6c506846bb2c873343ac13fb13e2cb82cd6f1f4c4bbcbd33553193abdc0c873",
+    "reference": "well, um, just a moment please tomorrow parking is available."
+  },
+  {
+    "sample_id": "en-in-033",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-033.wav",
+    "sha256": "b793d3b2ccd79290c95eadc129ac91d9e4d52f425daad883bb48ea1277a207fe",
+    "reference": "um, my name is Patel um, just a moment please phone number 9876543210 appointment cough and fever Dr Mehta."
+  },
+  {
+    "sample_id": "en-in-034",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-034.wav",
+    "sha256": "67519561430379445f49192ecab1fc41b20bf62af63f4feb461785b9a76dfbb4",
+    "reference": "well, cough and fever Dr Mehta Sharma clinic yes, that's right."
+  },
+  {
+    "sample_id": "en-in-035",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-035.wav",
+    "sha256": "f5e8b118afc1a3aa0489512da87243fe490c2c160e98360682ed7d3692dcf381",
+    "reference": "cough and fever Sharma clinic Monday to Saturday yes, that's right fee five hundred rupees phone number 9876543210."
+  },
+  {
+    "sample_id": "en-in-036",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-036.wav",
+    "sha256": "cfe58e2b41c00ecda7f60cdda0912bfe9b154d068dca4b2e2ed746151d44dfa0",
+    "reference": "well, cough and fever Sharma clinic um, just a moment please."
+  },
+  {
+    "sample_id": "en-in-037",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-037.wav",
+    "sha256": "10de40d015602ab4a9bf9084889e091a1051c295d73ebf156f18933ccca5d2ff",
+    "reference": "um, appointment parking is available Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-038",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-038.wav",
+    "sha256": "92f9bec970628b9e81eaa84fd0631b319e34688a8d4fe2b79ff43f30bd64d5cd",
+    "reference": "um, Dr Mehta parking is available my name is Patel tomorrow."
+  },
+  {
+    "sample_id": "en-in-039",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-039.wav",
+    "sha256": "2e02ddca79aca9fde4b5f7f1e58520e2df6d7215809406560a598aca9664aca2",
+    "reference": "yes, that's right um, just a moment please tomorrow ten in the morning my name is Patel."
+  },
+  {
+    "sample_id": "en-in-040",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-040.wav",
+    "sha256": "ee93596245fa0ec4d13eb4557db777f4fd95155886981d8536fadd2d97b2e9eb",
+    "reference": "my name is Patel tomorrow appointment fee five hundred rupees the twentieth."
+  },
+  {
+    "sample_id": "en-in-041",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-041.wav",
+    "sha256": "454a306f8568b7d2d720ddeaebb5ef368c18cc0ad8a0a2e4d7f4c38ee23dee9c",
+    "reference": "well, Dr Mehta ten in the morning fee five hundred rupees cough and fever tomorrow appointment."
+  },
+  {
+    "sample_id": "en-in-042",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-042.wav",
+    "sha256": "c61962db1e865c080b43d988bec3a738b6005cf215c6ceb9f5baf9af8e5333c4",
+    "reference": "ten in the morning um, just a moment please tomorrow Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-043",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-043.wav",
+    "sha256": "7df7f41f32800db69bac61ab0cc9e563e5025dfb5ff71729efb93c13043dd202",
+    "reference": "well, phone number 9876543210 Sharma clinic my name is Patel Dr Mehta parking is available the twentieth."
+  },
+  {
+    "sample_id": "en-in-044",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-044.wav",
+    "sha256": "19abcc0d8262bc3ed5ca73685ec4e657b9b6ace4d5994cf5ec37fa802fab78e7",
+    "reference": "um, parking is available appointment Monday to Saturday um, just a moment please the twentieth."
+  },
+  {
+    "sample_id": "en-in-045",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-045.wav",
+    "sha256": "b41b53360f104afec792d0c632395de65e1430f562f240e77eb8cf5d120b2feb",
+    "reference": "well, appointment the twentieth fee five hundred rupees."
+  },
+  {
+    "sample_id": "en-in-046",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-046.wav",
+    "sha256": "f51fdb285887f7e5edf3fdc63f7077a0baa8e5a8594000716cb08bedc1ed8bba",
+    "reference": "um, parking is available Dr Mehta yes, that's right."
+  },
+  {
+    "sample_id": "en-in-047",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-047.wav",
+    "sha256": "2717f343468a4230e8c2a0775a1117b509c996a8c5989074f25ed162e5f01154",
+    "reference": "well, fee five hundred rupees my name is Patel parking is available appointment."
+  },
+  {
+    "sample_id": "en-in-048",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-048.wav",
+    "sha256": "10e1987d300d12a5e152b390ca7acf8f8704fb50d20c95d9d5e983a6a4da5be3",
+    "reference": "um, Sharma clinic tomorrow yes, that's right the twentieth fee five hundred rupees my name is Patel."
+  },
+  {
+    "sample_id": "en-in-049",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-049.wav",
+    "sha256": "109a38c2c11cde7dd4c61b74429d5cd05207b186c4c78db7160640c7718bbc04",
+    "reference": "fee five hundred rupees um, just a moment please my name is Patel."
+  },
+  {
+    "sample_id": "en-in-050",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-050.wav",
+    "sha256": "93fa48869f3abb71d4ce1562f172e8e017af8234fbc5ea9d28ec9e331fa04661",
+    "reference": "well, my name is Patel phone number 9876543210 fee five hundred rupees appointment cough and fever parking is available."
+  },
+  {
+    "sample_id": "en-in-051",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-051.wav",
+    "sha256": "b77d47283db26f6c212e82a8fc65d60960d1b10896a24c76813a0e44c16d13f6",
+    "reference": "um, yes, that's right my name is Patel fee five hundred rupees appointment."
+  },
+  {
+    "sample_id": "en-in-052",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-052.wav",
+    "sha256": "80ae5d3692828c789a1a5d1b7065f2566b079c44b1367edb9b46d37c6603ef18",
+    "reference": "the twentieth my name is Patel appointment Sharma clinic Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-053",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-053.wav",
+    "sha256": "41bcc98c004ed85368508af9d6801686704ca599f76e22b6b5468e798a68fc75",
+    "reference": "um, yes, that's right Sharma clinic um, just a moment please the twentieth."
+  },
+  {
+    "sample_id": "en-in-054",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-054.wav",
+    "sha256": "c7f1409cd21f49f0e6cb53c178c4f13501b76d7731881de963f968185e3e51a0",
+    "reference": "well, phone number 9876543210 Dr Mehta the twentieth Sharma clinic."
+  },
+  {
+    "sample_id": "en-in-055",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-055.wav",
+    "sha256": "300c1fc5475d1bca64ac80437fc107e7571765187924aaad8d6bcec36672314b",
+    "reference": "well, Dr Mehta phone number 9876543210 the twentieth my name is Patel yes, that's right Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-056",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-056.wav",
+    "sha256": "9f15eff00bfb00e7036d5924f5ad47b46ec2b9ada158bf1992a48751aac99ab7",
+    "reference": "well, um, just a moment please Dr Mehta tomorrow phone number 9876543210 cough and fever fee five hundred rupees."
+  },
+  {
+    "sample_id": "en-in-057",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-057.wav",
+    "sha256": "f7acc4795e37e109ccd600a0e4a770c9c142dc696d7a0eda2f2796fd5482e082",
+    "reference": "Dr Mehta yes, that's right Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-058",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-058.wav",
+    "sha256": "0a4a73a12aa3e3168cdca743c7c388ae7d3fb6180e6f34a9e0abf0eea75729a4",
+    "reference": "the twentieth tomorrow Monday to Saturday."
+  },
+  {
+    "sample_id": "en-in-059",
+    "language": "en-in",
+    "audio_file": "eval/audio/en-in-059.wav",
+    "sha256": "b2b9683263e2b4d2ce6f82124db4dc5a757b694821ca4c1c495c5f583990e83c",
+    "reference": "um, tomorrow Sharma clinic the twentieth."
+  }
+]
