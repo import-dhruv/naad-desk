@@ -20,6 +20,7 @@ dist/
 .coverage
 htmlcov/
 recon/results/*.json
+!recon/results/scenarios.json
 !recon/results/phase0_ws_probe.json
 .vercel
 .env*
