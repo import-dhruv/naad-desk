@@ -90,14 +90,20 @@ def get_call(call_id: str, db: Session = Depends(get_db)):
 
 @router.post("/api/calls/{call_id}/analyze")
 async def analyze(call_id: str, db: Session = Depends(get_db)):
-    return await analyze_call(db, call_id)
+    if db.get(m.Call, call_id) is None:
+        raise HTTPException(404, "call not found")
+    result = await analyze_call(db, call_id)
+    if result.get("error") == "no_recordings":
+        raise HTTPException(422, "no recordings available for this call")
+    return result
 
 
 @router.get("/api/calls/{call_id}/recording/{channel}")
 def recording(call_id: str, channel: str):
-    from fastapi.responses import FileResponse
     import os
     from pathlib import Path
+
+    from fastapi.responses import FileResponse
 
     from ..config import ROOT, settings
     if channel not in ("caller", "agent"):

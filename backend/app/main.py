@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from .api import calls, evaluation, findings, health, knowledge
@@ -70,6 +70,12 @@ async def public_config():
 @app.get("/api/healthz")
 async def healthz():
     return {"ok": True}
+
+
+@app.api_route("/api/{full_path:path}", methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"])
+async def api_not_found(full_path: str):
+    """Unknown API paths get a JSON 404, never the SPA HTML shell."""
+    return JSONResponse({"detail": "Not Found"}, status_code=404)
 
 
 # Serve the built frontend if present (Docker/local). On Vercel the frontend is

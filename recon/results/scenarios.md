@@ -1,13 +1,13 @@
 # 24-Scenario Replay Results
 
-Generated: 2026-11-19T05:33:58.947408+00:00
+Generated: 2026-11-19T06:34:45.411359+00:00
 
 Passed 12 · Observed 10 · Failed 2 · Total 24
 
 | ID | Scenario | Status | Tools |
 |---|---|---|---|
 | S01 | Clinic timings | pass | — |
-| S02 | Consultation fee | pass | get_fees |
+| S02 | Consultation fee | fail | — |
 | S03 | Next available appointment | pass | search_availability |
 | S04 | Specific doctor/date/time | fail | book_appointment |
 | S05 | Relative date | pass | search_availability |
@@ -28,5 +28,5 @@ Passed 12 · Observed 10 · Failed 2 · Total 24
 | S20 | Dictate phone | observed | — |
 | S21 | Unrelated question | observed | — |
 | S22 | Ambiguous date | observed | search_availability |
-| S23 | Fee then booking | fail | — |
+| S23 | Fee then booking | pass | get_fees |
 | S24 | Correct a date | observed | reschedule_appointment |
