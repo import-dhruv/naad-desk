@@ -7,6 +7,7 @@ export class PlaybackScheduler {
   private ctx: AudioContext | null = null
   private nextTime = 0
   private queued = 0
+  private active: AudioBufferSourceNode[] = []
   recorded: Int16Array[] = []
 
   async ensure(): Promise<AudioContext> {
@@ -35,11 +36,19 @@ export class PlaybackScheduler {
     source.start(start)
     this.nextTime = start + buffer.duration
     this.queued++
-    source.onended = () => { this.queued = Math.max(0, this.queued - 1) }
+    this.active.push(source)
+    source.onended = () => {
+      this.queued = Math.max(0, this.queued - 1)
+      this.active = this.active.filter((s) => s !== source)
+    }
   }
 
-  /** Immediate barge-in: stop everything scheduled or playing. */
+  /** Immediate barge-in: stop everything scheduled or already playing. */
   flush(): void {
+    for (const source of this.active) {
+      try { source.stop() } catch { /* already ended */ }
+    }
+    this.active = []
     if (this.ctx) {
       this.nextTime = this.ctx.currentTime + 0.01
       this.queued = 0
