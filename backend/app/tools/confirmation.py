@@ -1,16 +1,18 @@
-"""Short-lived, in-process confirmation tokens (§8.1).
+"""Short-lived confirmation tokens stored in the database (§8.1).
 
-The confirmation rule lives in backend code: no booking/reschedule/cancel is
-committed unless the caller explicitly confirms with a token minted by a prior
-read-back step. The token is stored server-side and injected by the orchestrator
-when it detects an affirmative reply — never authored by the LLM.
+DB-backed so a token minted by one Vercel function instance can be consumed by
+another (after a WebSocket reconnect or instance switch).
 """
 from __future__ import annotations
 
 import secrets
-import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from datetime import datetime, timezone
 from typing import Any
+
+from sqlalchemy.orm import Session
+
+from ..db.models import PendingConfirmation
 
 TTL_SECONDS = 300
 
@@ -20,37 +22,61 @@ class Pending:
     kind: str
     payload: dict[str, Any]
     token: str
-    created_at: float = field(default_factory=time.time)
+    created_at: float
 
 
-_STORE: dict[str, Pending] = {}
+def _row(db: Session, call_id: str) -> PendingConfirmation | None:
+    return db.get(PendingConfirmation, call_id)
 
 
-def mint(call_id: str, kind: str, payload: dict[str, Any]) -> str:
+def mint(db: Session, call_id: str, kind: str, payload: dict[str, Any]) -> str:
+    import json
     token = secrets.token_urlsafe(8)
-    _STORE[call_id] = Pending(kind=kind, payload=payload, token=token)
+    row = _row(db, call_id)
+    if row is None:
+        db.add(PendingConfirmation(call_id=call_id, kind=kind, token=token,
+                                   created_at=datetime.now(timezone.utc),
+                                   payload_json=json.dumps(payload, ensure_ascii=False)))
+    else:
+        row.kind, row.token = kind, token
+        row.payload_json = json.dumps(payload, ensure_ascii=False)
+        row.created_at = datetime.now(timezone.utc)
+    db.commit()
     return token
 
 
-def peek(call_id: str) -> Pending | None:
-    pending = _STORE.get(call_id)
-    if not pending:
+def peek(db: Session, call_id: str) -> Pending | None:
+    import json
+    row = _row(db, call_id)
+    if not row:
         return None
-    if time.time() - pending.created_at > TTL_SECONDS:
-        _STORE.pop(call_id, None)
+    created = row.created_at
+    if created.tzinfo is None:  # SQLite returns naive UTC for TZDateTime
+        created = created.replace(tzinfo=timezone.utc)
+    age = (datetime.now(timezone.utc) - created).total_seconds()
+    if age > TTL_SECONDS:
+        db.delete(row)
+        db.commit()
         return None
-    return pending
+    return Pending(kind=row.kind, payload=json.loads(row.payload_json or "{}"),
+                   token=row.token, created_at=created.timestamp())
 
 
-def consume(call_id: str, token: str | None, kind: str) -> dict[str, Any] | None:
-    pending = peek(call_id)
+def consume(db: Session, call_id: str, token: str | None, kind: str) -> dict[str, Any] | None:
+    pending = peek(db, call_id)
     if not pending or pending.kind != kind:
         return None
     if token and token != pending.token:
         return None
-    _STORE.pop(call_id, None)
+    row = _row(db, call_id)
+    if row:
+        db.delete(row)
+        db.commit()
     return pending.payload
 
 
-def clear(call_id: str) -> None:
-    _STORE.pop(call_id, None)
+def clear(db: Session, call_id: str) -> None:
+    row = _row(db, call_id)
+    if row:
+        db.delete(row)
+        db.commit()

@@ -26,26 +26,27 @@ The project deploys as a single Vercel project with two **Services** (beta):
 - Both services are exposed through one deployment URL; the browser calls
   relative `/api` and `/ws` paths, so previews work without configuration.
 
-### Known limitation: ephemeral storage
-Vercel Functions have a read-only filesystem except `/tmp`. The backend therefore
-defaults to `sqlite:////tmp/naad_desk.db` on Vercel. Consequences:
+### Persistent storage (Neon Postgres)
+`DATABASE_URL` is provided by the Neon Marketplace integration and points to a
+serverless Postgres database. The backend normalises `postgresql://` to
+`postgresql+psycopg://`, uses dialect-aware writes (`SELECT … FOR UPDATE` on
+Postgres, `BEGIN IMMEDIATE` on SQLite), and portable datetime/index definitions.
+Confirmation tokens and the spend counter are stored in the database, so they
+survive instance switches. Call history, analytics, evaluations and findings now
+persist across cold starts.
 
-- Call history, analytics and evaluation runs reset on a cold start.
-- Recordings written under `/tmp` are not durable.
-- `GET /api/health` reports `storage: "ephemeral (/tmp SQLite) — data is reset on cold start"`
-  so this is visible at runtime rather than hidden.
+Recordings still write to `/tmp` (binary audio is not stored in Postgres); they are
+durable in the local/Docker deployment, which uses a mounted volume.
 
-This is intentional for the showcase MVP (no paid infrastructure). To make it
-production-durable, set `DATABASE_URL` to a managed PostgreSQL instance and switch
-the models to portable SQLAlchemy types; see the tracked enhancement issue on
-GitHub. The local/Docker deployment uses a persistent SQLite file and retains all
-data.
+`GET /api/health` reports the active storage mode.
 
-### WebSocket duration
+### WebSocket duration and reconnect
 Vercel Functions cap connection lifetime (300 s on Hobby by default). The browser
-client implements reconnect with 1 s / 2 s / 4 s back-off; long calls should resume
-against the in-memory state, but a reconnect to a different instance cannot restore
-process-local state. This is a platform constraint, documented rather than hidden.
+client reconnects with 1 s / 2 s / 4 s back-off and sends `resume_call_id`; the
+backend restores the conversation snapshot stored in `calls.metadata_json`.
+Confirmation tokens and spend counters are DB-backed, so a resume on a different
+instance keeps the booking flow and spend guard consistent. Cold-start latency on
+the first request remains a platform characteristic.
 
 ## Docker / local
 `docker compose up --build` mounts a named volume at `/app/data` and sets

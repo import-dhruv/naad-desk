@@ -15,23 +15,48 @@ import httpx
 
 from ..config import settings
 from ..db.database import SessionLocal
-from ..db.models import ApiCall
+from ..db.models import ApiCall, SpendState
 from ..logging_util import log
 
 
 class SpendGuard:
-    """Aborts new upstream requests once the per-run ceiling is reached."""
+    """Aborts new upstream requests once the per-run ceiling is reached.
+
+    State lives in the DB so it is shared across Vercel function instances.
+    """
 
     def __init__(self, ceiling_paise: int) -> None:
         self.ceiling = ceiling_paise
-        self.spent = 0.0
+
+    @staticmethod
+    def _row(db):
+        row = db.get(SpendState, 1)
+        if row is None:
+            row = SpendState(id=1, spent_paise=0.0)
+            db.add(row)
+            db.commit()
+        return row
+
+    @property
+    def spent(self) -> float:
+        db = SessionLocal()
+        try:
+            return float(self._row(db).spent_paise)
+        finally:
+            db.close()
 
     def check(self) -> None:
         if self.spent >= self.ceiling:
             raise RuntimeError("spend_ceiling_reached")
 
     def add(self, paise: float) -> None:
-        self.spent += paise
+        db = SessionLocal()
+        try:
+            row = self._row(db)
+            row.spent_paise = float(row.spent_paise) + paise
+            db.commit()
+        finally:
+            db.close()
 
 
 spend_guard = SpendGuard(settings.cost_ceiling_paise)

@@ -5,6 +5,7 @@ from datetime import datetime
 
 from sqlalchemy import (
     Boolean,
+    DateTime,
     Float,
     ForeignKey,
     Index,
@@ -17,6 +18,8 @@ from sqlalchemy import (
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from .database import Base
+
+TZDateTime = DateTime(timezone=True)
 
 
 class Doctor(Base):
@@ -40,7 +43,7 @@ class Slot(Base):
     __tablename__ = "slots"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     doctor_id: Mapped[int] = mapped_column(ForeignKey("doctors.id", ondelete="CASCADE"), nullable=False)
-    start_ts: Mapped[datetime] = mapped_column(nullable=False)
+    start_ts: Mapped[datetime] = mapped_column(TZDateTime, nullable=False)
     duration_minutes: Mapped[int] = mapped_column(Integer, default=30)
     status: Mapped[str] = mapped_column(String(20), default="available")  # available|booked|blocked
     doctor: Mapped[Doctor] = relationship()
@@ -61,8 +64,8 @@ class Appointment(Base):
     phone_hash: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
     status: Mapped[str] = mapped_column(String(20), default="confirmed")  # confirmed|cancelled
     created_call_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
-    created_at: Mapped[datetime] = mapped_column(default=func.now())
-    updated_at: Mapped[datetime] = mapped_column(default=func.now(), onupdate=func.now())
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now(), onupdate=func.now())
     slot: Mapped[Slot] = relationship()
 
     # One *live* appointment per slot — DB-level protection against double booking.
@@ -70,7 +73,8 @@ class Appointment(Base):
     # rebooked while two confirmed appointments for the same slot remain impossible.
     __table_args__ = (
         Index("uq_live_appointment_slot", "slot_id", unique=True,
-              sqlite_where=(status == "confirmed")),
+              sqlite_where=(status == "confirmed"),
+              postgresql_where=(status == "confirmed")),
         Index("ix_appointment_status", "status"),
         Index("ix_appointment_call", "created_call_id"),
     )
@@ -79,7 +83,7 @@ class Appointment(Base):
 class Call(Base):
     __tablename__ = "calls"
     id: Mapped[str] = mapped_column(String(64), primary_key=True)
-    started_at: Mapped[datetime] = mapped_column(default=func.now())
+    started_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
     ended_at: Mapped[datetime | None] = mapped_column(nullable=True)
     language: Mapped[str] = mapped_column(String(12), default="hi")
     prompt_version: Mapped[str] = mapped_column(String(32), default="v1.0")
@@ -145,7 +149,7 @@ class ApiCall(Base):
     headers_json: Mapped[str] = mapped_column(Text, default="{}")
     latency_ms: Mapped[float] = mapped_column(Float, default=0)
     cost_paise: Mapped[float] = mapped_column(Float, default=0)
-    created_at: Mapped[datetime] = mapped_column(default=func.now())
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
 
     __table_args__ = (Index("ix_api_call_call", "call_id"),)
 
@@ -159,7 +163,7 @@ class Analytics(Base):
     extraction_json: Mapped[str] = mapped_column(Text, default="{}")
     qa_json: Mapped[str] = mapped_column(Text, default="{}")
     summary: Mapped[str] = mapped_column(Text, default="")
-    created_at: Mapped[datetime] = mapped_column(default=func.now())
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
 
 
 class Document(Base):
@@ -171,7 +175,7 @@ class Document(Base):
     content_hash: Mapped[str] = mapped_column(String(64), nullable=False)
     char_count: Mapped[int] = mapped_column(Integer, default=0)
     chunk_count: Mapped[int] = mapped_column(Integer, default=0)
-    indexed_at: Mapped[datetime] = mapped_column(default=func.now())
+    indexed_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
     status: Mapped[str] = mapped_column(String(20), default="indexed")
 
 
@@ -193,7 +197,7 @@ class EvalRun(Base):
     __tablename__ = "eval_runs"
     id: Mapped[str] = mapped_column(String(64), primary_key=True)
     kind: Mapped[str] = mapped_column(String(40), nullable=False)
-    started_at: Mapped[datetime] = mapped_column(default=func.now())
+    started_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
     finished_at: Mapped[datetime | None] = mapped_column(nullable=True)
     config_json: Mapped[str] = mapped_column(Text, default="{}")
     metrics_json: Mapped[str] = mapped_column(Text, default="{}")
@@ -217,6 +221,23 @@ class EvalSample(Base):
     __table_args__ = (Index("ix_eval_sample_run", "run_id"),)
 
 
+class PendingConfirmation(Base):
+    """DB-backed confirmation token (survives Vercel instance switches)."""
+    __tablename__ = "pending_confirmations"
+    call_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    kind: Mapped[str] = mapped_column(String(60), nullable=False)
+    token: Mapped[str] = mapped_column(String(80), nullable=False)
+    payload_json: Mapped[str] = mapped_column(Text, default="{}")
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
+
+
+class SpendState(Base):
+    """Single-row running cost counter shared across instances."""
+    __tablename__ = "spend_state"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    spent_paise: Mapped[float] = mapped_column(Float, default=0.0)
+
+
 class Finding(Base):
     __tablename__ = "findings"
     id: Mapped[str] = mapped_column(String(24), primary_key=True)
@@ -230,7 +251,7 @@ class Finding(Base):
     suggestion: Mapped[str] = mapped_column(Text, default="")
     status: Mapped[str] = mapped_column(String(20), default="open")
     kind: Mapped[str] = mapped_column(String(24), default="observation")  # bug|limitation|observation|improvement
-    created_at: Mapped[datetime] = mapped_column(default=func.now())
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=func.now())
 
     __table_args__ = (
         Index("ix_finding_severity", "severity"),

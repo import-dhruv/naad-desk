@@ -270,6 +270,13 @@ def _finalize(result: TurnResult, state: ConversationState, t0: float, db: Sessi
                         result_json=json.dumps(tool["data"], ensure_ascii=False),
                         execution_time_ms=result.timings.get("tool_ms", 0)))
     db.commit()
+    # Persist a resumable snapshot so a reconnect to a different function
+    # instance can continue the conversation (Vercel 300 s connection cap).
+    from ..db.models import Call
+    call = db.get(Call, state.call_id)
+    if call is not None:
+        call.metadata_json = json.dumps(state.to_dict(), ensure_ascii=False)
+        db.commit()
     log.info("turn_completed", extra={"call_id": state.call_id, "turn_idx": state.turn_index,
                                        "intent": state.current_intent,
                                        "duration_ms": result.timings.get("turn_ms")})

@@ -15,6 +15,10 @@ class Base(DeclarativeBase):
 
 
 def _resolve_url(url: str) -> str:
+    # Marketplace Postgres providers hand out a plain postgresql:// URL.
+    # SQLAlchemy 2.x needs an explicit driver.
+    if url.startswith("postgresql://"):
+        url = url.replace("postgresql://", "postgresql+psycopg://", 1)
     if url.startswith("sqlite:///") and not url.startswith("sqlite:////"):
         rel = url[len("sqlite:///"):]
         path = (ROOT / rel).resolve()
@@ -23,15 +27,20 @@ def _resolve_url(url: str) -> str:
     return url
 
 
+_DB_URL = _resolve_url(settings.database_url)
+_IS_SQLITE = _DB_URL.startswith("sqlite")
+
 engine = create_engine(
-    _resolve_url(settings.database_url),
-    connect_args={"check_same_thread": False, "timeout": 30},
+    _DB_URL,
+    connect_args=({"check_same_thread": False, "timeout": 30} if _IS_SQLITE else {}),
     future=True,
 )
 
 
 @event.listens_for(engine, "connect")
 def _set_sqlite_pragmas(dbapi_conn: object, _: object) -> None:
+    if engine.dialect.name != "sqlite":
+        return
     cur = dbapi_conn.cursor()  # type: ignore[attr-defined]
     cur.execute("PRAGMA journal_mode=WAL")
     cur.execute("PRAGMA foreign_keys=ON")

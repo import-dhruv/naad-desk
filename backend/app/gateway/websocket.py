@@ -79,6 +79,7 @@ async def call_socket(ws: WebSocket) -> None:
             voice=start.get("voice"),
             retriever=get_retriever(),
             outgoing=emit,
+            resume_call_id=start.get("resume_call_id"),
         )
         await session.start()
 
