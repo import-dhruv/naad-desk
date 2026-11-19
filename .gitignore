@@ -21,3 +21,8 @@ dist/
 htmlcov/
 recon/results/*.json
 !recon/results/phase0_ws_probe.json
+.vercel
+.env*
+
+.env.local
+.vercel

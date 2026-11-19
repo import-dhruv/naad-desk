@@ -10,7 +10,11 @@ import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+IS_VERCEL = bool(os.getenv("VERCEL") or os.getenv("VERCEL_ENV"))
+
+# Locally the backend lives in <repo>/backend/app/. On Vercel the backend is its
+# own service root, so config.py is <service>/app/config.py.
+ROOT = Path(__file__).resolve().parents[1] if IS_VERCEL else Path(__file__).resolve().parents[2]
 
 
 def _load_dotenv() -> None:
@@ -31,9 +35,6 @@ _load_dotenv()
 
 def _get(name: str, default: str = "") -> str:
     return os.getenv(name, default)
-
-
-IS_VERCEL = bool(os.getenv("VERCEL") or os.getenv("VERCEL_ENV"))
 
 
 def _default_db_url() -> str:

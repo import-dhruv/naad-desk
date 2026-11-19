@@ -31,10 +31,9 @@ async def lifespan(app: FastAPI):
         retriever = HybridRetriever()
         retriever.build_from_db(db)
         set_retriever(retriever)
-        # Genuine findings from Phase 0 reconnaissance.
-        import sys
-        sys.path.insert(0, str(ROOT))
-        from recon.findings_seed import seed_findings
+        # Genuine findings from Phase 0 reconnaissance (bundled with the backend
+        # service so it is self-contained on Vercel).
+        from .findings_data import seed_findings
         added = seed_findings(db)
         log.info("findings_seeded", extra={"added": added})
     finally:
