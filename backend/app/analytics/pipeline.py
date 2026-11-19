@@ -28,6 +28,12 @@ async def analyze_call(db: Session, call_id: str) -> dict:
     if call is None:
         return {"error": "call not found"}
 
+    if not ((RECORDINGS / call_id / "caller.wav").exists()
+            and (RECORDINGS / call_id / "agent.wav").exists()):
+        log.info("analysis_skipped_no_recordings", extra={"call_id": call_id})
+        return {"error": "no_recordings", "call_id": call_id,
+                "qa": None, "summary": "", "merged_turns": []}
+
     caller = await transcribe_channel(RECORDINGS / call_id / "caller.wav", call.language, call_id)
     agent = await transcribe_channel(RECORDINGS / call_id / "agent.wav", call.language, call_id)
     merged_turns = merge_transcripts(caller, agent)
