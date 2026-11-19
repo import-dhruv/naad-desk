@@ -26,3 +26,5 @@ recon/results/*.json
 
 .env.local
 .vercel
+
+-w
