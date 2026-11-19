@@ -31,7 +31,10 @@ async def health() -> dict:
             "ws_url": settings.ws_url.split("?")[0],
         },
         "retrieval": "ready",
-        "storage": ("ephemeral (/tmp SQLite) — data is reset on cold start"
-                    if settings.is_vercel else "local SQLite file"),
+        "storage": (
+            "Neon Postgres (persistent)" if settings.database_url.startswith(("postgresql://", "postgresql+psycopg://"))
+            else "ephemeral (/tmp SQLite)" if settings.is_vercel
+            else "local SQLite file"
+        ),
         "timestamp": time.time(),
     }

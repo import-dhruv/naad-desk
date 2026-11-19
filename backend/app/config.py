@@ -10,7 +10,13 @@ import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
-IS_VERCEL = bool(os.getenv("VERCEL") or os.getenv("VERCEL_ENV"))
+IS_VERCEL = bool(
+    os.getenv("VERCEL")
+    or os.getenv("VERCEL_ENV")
+    or os.getenv("VERCEL_URL")
+    or os.getenv("LAMBDA_TASK_ROOT")
+    or os.getenv("AWS_LAMBDA_FUNCTION_NAME")
+)
 
 # Locally the backend lives in <repo>/backend/app/. On Vercel the backend is its
 # own service root, so config.py is <service>/app/config.py.
