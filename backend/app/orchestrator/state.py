@@ -40,6 +40,24 @@ class ConversationState:
         self.history.append({"idx": str(self.turn_index), "speaker": speaker,
                              "text": text, "language": language or self.language})
 
+    RESUME_FIELDS = (
+        "language", "voice", "current_intent", "patient_name", "phone_number",
+        "selected_doctor", "requested_date", "requested_time", "appointment_status",
+        "pending_confirmation", "pending_token", "retrieval_confidence",
+        "turn_index", "safety_events", "handoff_requested", "cost_paise",
+    )
+
+    def to_dict(self) -> dict[str, Any]:
+        return {key: getattr(self, key) for key in self.RESUME_FIELDS}
+
+    @classmethod
+    def from_dict(cls, call_id: str, data: dict[str, Any]) -> "ConversationState":
+        state = cls(call_id=call_id)
+        for key in cls.RESUME_FIELDS:
+            if key in data and data[key] is not None:
+                setattr(state, key, data[key])
+        return state
+
     def snapshot(self) -> dict[str, Any]:
         return {
             "call_id": self.call_id, "language": self.language,

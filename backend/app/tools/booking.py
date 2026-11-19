@@ -4,11 +4,11 @@ from __future__ import annotations
 
 import re
 
-from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from ..db.models import Appointment, Doctor, Slot
 from ..db.seed import mask_phone, phone_hash
+from ..db.transactions import lock_for_update
 from ..schemas.tools import BookAppointmentArgs, ToolResult
 from .availability import format_time_human, resolve_doctor
 from .confirmation import consume, mint
@@ -38,11 +38,14 @@ def _lookup_slot(db: Session, args: BookAppointmentArgs):
         if d is None:
             return None
         q = q.filter(Slot.doctor_id == d.id)
-    if args.date:
-        q = q.filter(text("date(start_ts) = :d").bindparams(d=args.date))
-    if args.time:
-        q = q.filter(text("strftime('%H:%M', start_ts) = :t").bindparams(t=args.time))
-    return q.order_by(Slot.start_ts).first()
+    # Date/time filtering in Python keeps this portable across SQLite/Postgres.
+    for slot in q.order_by(Slot.start_ts).all():
+        if args.date and slot.start_ts.date().isoformat() != args.date:
+            continue
+        if args.time and slot.start_ts.strftime("%H:%M") != args.time:
+            continue
+        return slot
+    return None
 
 
 def _spoken_details(slot: Slot, doctor: Doctor, patient: str, phone_masked: str, language: str) -> str:
@@ -86,7 +89,7 @@ def book_appointment(db: Session, call_id: str, args: BookAppointmentArgs,
 
     # Phase 1 — read back and ask for explicit confirmation.
     if not args.confirmed or not caller_confirmed:
-        token = mint(call_id, "book_appointment", payload)
+        token = mint(db, call_id, "book_appointment", payload)
         return ToolResult(
             ok=True, tool="book_appointment",
             data={"phase": "pending_confirmation", "confirm_token": token, **payload},
@@ -94,12 +97,12 @@ def book_appointment(db: Session, call_id: str, args: BookAppointmentArgs,
         )
 
     # Phase 2 — authenticated commit in a serialized transaction.
-    approved = consume(call_id, args.confirm_token, "book_appointment")
+    approved = consume(db, call_id, args.confirm_token, "book_appointment")
     if approved is None or approved.get("slot_id") != slot.id:
         return ToolResult(ok=False, tool="book_appointment",
                           error="Confirmation missing or expired. Please confirm again.")
     try:
-        db.execute(text("BEGIN IMMEDIATE"))
+        lock_for_update(db, Slot, slot.id)
         fresh = db.get(Slot, slot.id)
         if fresh is None or fresh.status != "available":
             db.rollback()

@@ -1,11 +1,11 @@
 """Identity-verified, confirmation-enforced appointment cancellation (§8.3)."""
 from __future__ import annotations
 
-from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from ..db.models import Appointment, Doctor, Slot
 from ..db.seed import phone_hash
+from ..db.transactions import lock_for_update
 from ..schemas.tools import CancelArgs, ToolResult
 from .availability import format_time_human
 from .confirmation import consume, mint
@@ -45,7 +45,7 @@ def cancel_appointment(db: Session, call_id: str, args: CancelArgs,
     payload = {"appointment_id": appt.id, "slot_id": appt.slot_id}
 
     if not args.confirmed or not caller_confirmed:
-        token = mint(call_id, "cancel_appointment", payload)
+        token = mint(db, call_id, "cancel_appointment", payload)
         if language == "gu":
             spoken = f"તમે {desc} રદ કરવા માંગો છો? કૃપા કરીને પુષ્ટિ કરો."
         elif language == "hi":
@@ -56,12 +56,12 @@ def cancel_appointment(db: Session, call_id: str, args: CancelArgs,
                           data={"phase": "pending_confirmation", "confirm_token": token, **payload},
                           spoken=spoken)
 
-    approved = consume(call_id, args.confirm_token, "cancel_appointment")
+    approved = consume(db, call_id, args.confirm_token, "cancel_appointment")
     if approved is None or approved.get("appointment_id") != appt.id:
         return ToolResult(ok=False, tool="cancel_appointment",
                           error="Confirmation missing or expired.")
     try:
-        db.execute(text("BEGIN IMMEDIATE"))
+        lock_for_update(db, Slot, appt.slot_id)
         fresh = db.get(Appointment, appt.id)
         if fresh is None or fresh.status != "confirmed":
             db.rollback()

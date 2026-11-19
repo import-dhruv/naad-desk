@@ -1,10 +1,10 @@
 """Atomic, identity-verified, confirmation-enforced rescheduling (§8.2)."""
 from __future__ import annotations
 
-from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from ..db.models import Appointment, Doctor, Slot
+from ..db.transactions import lock_for_update
 from ..schemas.tools import RescheduleArgs, ToolResult
 from .availability import format_time_human
 from .cancellation import find_appointment
@@ -16,11 +16,13 @@ def _pending_slot(db: Session, args: RescheduleArgs):
     if args.new_slot_id:
         return db.get(Slot, args.new_slot_id)
     q = db.query(Slot).filter(Slot.status == "available")
-    if args.new_date:
-        q = q.filter(text("date(start_ts) = :d").bindparams(d=args.new_date))
-    if args.new_time:
-        q = q.filter(text("strftime('%H:%M', start_ts) = :t").bindparams(t=args.new_time))
-    return q.order_by(Slot.start_ts).first()
+    for slot in q.order_by(Slot.start_ts).all():
+        if args.new_date and slot.start_ts.date().isoformat() != args.new_date:
+            continue
+        if args.new_time and slot.start_ts.strftime("%H:%M") != args.new_time:
+            continue
+        return slot
+    return None
 
 
 def _spoken_new(slot: Slot, doctor: Doctor, language: str) -> str:
@@ -48,17 +50,17 @@ def reschedule_appointment(db: Session, call_id: str, args: RescheduleArgs,
                "new_slot_id": new_slot.id}
 
     if not args.confirmed or not caller_confirmed:
-        token = mint(call_id, "reschedule_appointment", payload)
+        token = mint(db, call_id, "reschedule_appointment", payload)
         return ToolResult(ok=True, tool="reschedule_appointment",
                           data={"phase": "pending_confirmation", "confirm_token": token, **payload},
                           spoken=_spoken_new(new_slot, doctor, language))
 
-    approved = consume(call_id, args.confirm_token, "reschedule_appointment")
+    approved = consume(db, call_id, args.confirm_token, "reschedule_appointment")
     if approved is None or approved.get("appointment_id") != appt.id:
         return ToolResult(ok=False, tool="reschedule_appointment",
                           error="Confirmation missing or expired.")
     try:
-        db.execute(text("BEGIN IMMEDIATE"))
+        lock_for_update(db, Slot, appt.slot_id)
         fresh_appt = db.get(Appointment, appt.id)
         fresh_new = db.get(Slot, new_slot.id)
         if (fresh_appt is None or fresh_appt.status != "confirmed"

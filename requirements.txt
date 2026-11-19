@@ -18,3 +18,6 @@ ruff>=0.5
 # Optional (large): enables real multilingual dense embeddings.
 # The app auto-falls back to a labelled deterministic dense vector without it.
 # sentence-transformers>=3.0
+
+# PostgreSQL driver for Vercel/Neon deployment
+psycopg[binary]>=3.1

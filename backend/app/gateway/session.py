@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import asyncio
 import base64
+import json
 import os
 import time
 import wave
@@ -41,10 +42,12 @@ def _write_wav(path: Path, frames: list[bytes], sample_rate: int) -> None:
 
 class CallSession:
     def __init__(self, call_id: str, language: str = "hi", voice: str | None = None,
-                 retriever: HybridRetriever | None = None, outgoing=None) -> None:
+                 retriever: HybridRetriever | None = None, outgoing=None,
+                 resume_call_id: str | None = None) -> None:
         self.call_id = call_id
         self.state = ConversationState(call_id=call_id, language=language,
                                        voice=voice or settings.voice)
+        self.resume_call_id = resume_call_id
         self.retriever = retriever or HybridRetriever()
         self.outgoing = outgoing          # async callable(dict) -> None
         self.upstream = RealtimeClient(call_id)
@@ -66,11 +69,23 @@ class CallSession:
     async def start(self) -> None:
         db = SessionLocal()
         try:
+            if self.resume_call_id:
+                previous = db.get(Call, self.resume_call_id)
+                if previous is not None and previous.metadata_json:
+                    try:
+                        self.state = ConversationState.from_dict(
+                            self.call_id, json.loads(previous.metadata_json))
+                        await self.emit("caption", {"speaker": "system",
+                                                    "text": "Connection restored — continuing the call.",
+                                                    "final": True})
+                    except (ValueError, TypeError):
+                        log.warning("resume_state_invalid", extra={"call_id": self.call_id})
             call = db.get(Call, self.call_id)
             if call is None:
                 db.add(Call(id=self.call_id, language=self.state.language,
                             prompt_version=self.state.prompt_version,
-                            kb_version=self.state.kb_version))
+                            kb_version=self.state.kb_version,
+                            metadata_json=json.dumps(self.state.to_dict(), ensure_ascii=False)))
                 db.commit()
         finally:
             db.close()
