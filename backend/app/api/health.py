@@ -31,5 +31,7 @@ async def health() -> dict:
             "ws_url": settings.ws_url.split("?")[0],
         },
         "retrieval": "ready",
+        "storage": ("ephemeral (/tmp SQLite) — data is reset on cold start"
+                    if settings.is_vercel else "local SQLite file"),
         "timestamp": time.time(),
     }

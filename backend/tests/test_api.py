@@ -19,6 +19,12 @@ def client():
         yield c
 
 
+def test_health_reports_storage_mode(client):
+    body = client.get("/api/health").json()
+    assert "storage" in body
+    assert ("ephemeral" in body["storage"]) or ("SQLite file" in body["storage"])
+
+
 def test_missing_call_detail_is_404(client):
     assert client.get("/api/calls/does-not-exist").status_code == 404
 

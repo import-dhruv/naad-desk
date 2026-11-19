@@ -108,3 +108,5 @@ eval/reports/generate_report.py        # regenerate evaluation report
 - TTS streaming and language-switch matrices require browser trials; empty states
   are shown rather than fabricated numbers.
 - No wallet-balance read endpoint was found; a local spend guard is used.
+- The Vercel deployment uses ephemeral `/tmp` SQLite (data resets on cold start) and
+  is protected by Vercel Authentication. See `docs/deployment.md`; local/Docker is persistent.

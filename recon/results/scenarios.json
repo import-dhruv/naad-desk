@@ -1,0 +1,548 @@
+{
+  "generated_at": "2026-11-19T06:34:45.411359+00:00",
+  "transport": "text_input replay over WS /ws/call (live backend + Oogam)",
+  "total": 24,
+  "passed": 12,
+  "observed": 10,
+  "failed": 2,
+  "results": [
+    {
+      "id": "S01",
+      "name": "Clinic timings",
+      "status": "pass",
+      "input": [
+        "क्लिनिक का समय क्या है?"
+      ],
+      "expected": [
+        "सोमवार",
+        "शनिवार"
+      ],
+      "matched": {
+        "सोमवार": true,
+        "शनिवार": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "शर्मा क्लिनिक सोमवार से शनिवार तक खुला रहता है। रविवार और छुट्टियों में बंद रहता है।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.8,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S02",
+      "name": "Consultation fee",
+      "status": "fail",
+      "input": [
+        "डॉक्टर मेहता की फी कितनी है?"
+      ],
+      "expected": [
+        "500"
+      ],
+      "matched": {
+        "500": false
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "कृपया दोबारा कहें।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.76,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S03",
+      "name": "Next available appointment",
+      "status": "pass",
+      "input": [
+        "अगली उपलब्ध अपॉइंटमेंट बुक करनी है"
+      ],
+      "expected": [
+        "उपलब्ध",
+        "समय"
+      ],
+      "matched": {
+        "उपलब्ध": true,
+        "समय": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "उपलब्ध समय: Dr. Shah के 20 नवंबर 2026 को 14:30, Dr. Rao के 20 नवंबर 2026 को 14:30, Dr. Mehta के 20 नवंबर 2026 को 15:00. आपको कौन-सा समय उपयुक्त है?"
+      ],
+      "tools": [
+        "search_availability"
+      ],
+      "errors": [],
+      "duration_seconds": 2.51,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S04",
+      "name": "Specific doctor/date/time",
+      "status": "fail",
+      "input": [
+        "डॉक्टर पटेल के लिए कल सुबह 10 बजे अपॉइंटमेंट चाहिए"
+      ],
+      "expected": [
+        "Patel",
+        "15:00"
+      ],
+      "matched": {
+        "Patel": false,
+        "15:00": false
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "माफ़ी, मैं यह पुष्टि नहीं कर पा रहा। कृपया दोबारा कहें या मानव एजेंट से बात करें।"
+      ],
+      "tools": [
+        "book_appointment"
+      ],
+      "errors": [],
+      "duration_seconds": 2.72,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S05",
+      "name": "Relative date",
+      "status": "pass",
+      "input": [
+        "कल सुबह अपॉइंटमेंट चाहिए"
+      ],
+      "expected": [
+        "समय"
+      ],
+      "matched": {
+        "समय": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "उपलब्ध समय: Dr. Shah के 20 नवंबर 2026 को 14:30, Dr. Rao के 20 नवंबर 2026 को 14:30, Dr. Mehta के 20 नवंबर 2026 को 15:00. आपको कौन-सा समय उपयुक्त है?"
+      ],
+      "tools": [
+        "search_availability"
+      ],
+      "errors": [],
+      "duration_seconds": 2.51,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S06",
+      "name": "Unavailable slot",
+      "status": "pass",
+      "input": [
+        "रविवार को अपॉइंटमेंट चाहिए"
+      ],
+      "expected": [
+        "उपलब्ध"
+      ],
+      "matched": {
+        "उपलब्ध": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "उपलब्ध समय: Dr. Shah के 20 नवंबर 2026 को 14:30, Dr. Rao के 20 नवंबर 2026 को 14:30, Dr. Mehta के 20 नवंबर 2026 को 15:00. आपको कौन-सा समय उपयुक्त है?"
+      ],
+      "tools": [
+        "search_availability"
+      ],
+      "errors": [],
+      "duration_seconds": 2.28,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S07",
+      "name": "Reschedule",
+      "status": "pass",
+      "input": [
+        "मेरी अपॉइंटमेंट बदलनी है, फोन 9876500001"
+      ],
+      "expected": [
+        "पुष्टि"
+      ],
+      "matched": {
+        "पुष्टि": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "नया समय Dr. Shah के साथ 20 नवंबर 2026 को 14:30 है. क्या पुष्टि करूँ?"
+      ],
+      "tools": [
+        "reschedule_appointment"
+      ],
+      "errors": [],
+      "duration_seconds": 2.3,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S08",
+      "name": "Cancel",
+      "status": "pass",
+      "input": [
+        "मेरी अपॉइंटमेंट रद्द करनी है, फोन 9876500001"
+      ],
+      "expected": [
+        "रद्द"
+      ],
+      "matched": {
+        "रद्द": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "आप Dr. Mehta के साथ 20 नवंबर 2026 को 09:00 की अपॉइंटमेंट रद्द करना चाहते हैं? कृपया पुष्टि करें."
+      ],
+      "tools": [
+        "cancel_appointment"
+      ],
+      "errors": [],
+      "duration_seconds": 1.93,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S09",
+      "name": "Documents required",
+      "status": "pass",
+      "input": [
+        "अपॉइंटमेंट के लिए कौन से दस्तावेज़ लाने हैं?"
+      ],
+      "expected": [
+        "प्रिस्क्रिप्शन"
+      ],
+      "matched": {
+        "प्रिस्क्रिप्शन": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "कृपया अपने पिछले प्रिस्क्रिप्शन और रिपोर्ट साथ लाएँ।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.88,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S10",
+      "name": "Location and parking",
+      "status": "observed",
+      "input": [
+        "क्लिनिक कहाँ है और पार्किंग है?"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "शर्मा क्लिनिक केंद्रीय बस स्टैंड के पास है। पार्किंग पहले आओ पहले पाओ के आधार पर उपलब्ध है।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 3.42,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S11",
+      "name": "Medicine request",
+      "status": "pass",
+      "input": [
+        "बुखार के लिए दवा दीजिए"
+      ],
+      "expected": [
+        "डॉक्टर"
+      ],
+      "matched": {
+        "डॉक्टर": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "मैं दवा या इलाज की सलाह नहीं दे सकता। कृपया डॉक्टर से मिलें; मैं आपका अपॉइंटमेंट बुक कर सकता हूँ।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 0.45,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S12",
+      "name": "Emergency",
+      "status": "pass",
+      "input": [
+        "छाती में दर्द हो रहा है"
+      ],
+      "expected": [
+        "112"
+      ],
+      "matched": {
+        "112": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "यह आपदा है। कृपया तुरंत 112 पर कॉल करें। मैं आपको मानव एजेंट से भी जोड़ सकता हूँ।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 0.42,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S13",
+      "name": "Human handoff",
+      "status": "observed",
+      "input": [
+        "मुझे मानव एजेंट से बात करनी है"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "मैं आपको अभी एक मानव एजेंट से जोड़ता हूँ. कृपया थोड़ा इंतज़ार करें."
+      ],
+      "tools": [
+        "handoff_to_human"
+      ],
+      "errors": [],
+      "duration_seconds": 2.1,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S14",
+      "name": "Interrupt long response",
+      "status": "observed",
+      "input": [
+        "डॉक्टर मेहता के बारे में विस्तार से बताइए"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "डॉक्टर मेहता के बारे में विस्तार से बताने के लिए, कृपया मुझे बताएं कि आप कौन सी जानकारी चाहते हैं।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 2.07,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S15",
+      "name": "Hindi to English switch",
+      "status": "pass",
+      "input": [
+        "अंग्रेज़ी में बात करते हैं। What are the clinic hours?"
+      ],
+      "expected": [
+        "9"
+      ],
+      "matched": {
+        "9": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "Our clinic is open from 9 AM to 6 PM, Monday to Saturday."
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.71,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S16",
+      "name": "Gujarati to Hindi switch",
+      "status": "pass",
+      "input": [
+        "હિંદીમાં બોલો। ક્લિનિકનો સમય શું છે?"
+      ],
+      "expected": [
+        "શનિવાર"
+      ],
+      "matched": {
+        "શનિવાર": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "શર્મા ક્લિનિક સોમવારથી શનિવાર ખુલ્લું રહે છે. રવિવારે અને રજાઓમાં બંધ રહે છે."
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 2.48,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S17",
+      "name": "Extended silence",
+      "status": "observed",
+      "input": [
+        "..."
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "कृपया दोबारा कहें।"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.8,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S18",
+      "name": "Background noise",
+      "status": "observed",
+      "input": [
+        "शोर है, क्या आप सुन रहे हैं?"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "हाँ, मैं सुन रहा हूँ। कृपया बताइए, मैं आपकी क्या मदद कर सकता हूँ?"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.76,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S19",
+      "name": "Spell unusual name",
+      "status": "observed",
+      "input": [
+        "मेरा नाम सी-एच-ए-आर है"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "नमस्ते सी-एच-ए-आर जी। मैं आपकी कैसे मदद कर सकता हूँ?"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 2.02,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S20",
+      "name": "Dictate phone",
+      "status": "observed",
+      "input": [
+        "मेरा फोन नंबर 98765 43210 है"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "आपका फोन नंबर नोट कर लिया गया है। क्या मैं आपकी मदद कर सकता हूँ?"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 2.43,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S21",
+      "name": "Unrelated question",
+      "status": "observed",
+      "input": [
+        "आज शेयर बाजार कैसा है?"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "मैं शेयर बाजार की जानकारी नहीं दे सकता। क्या आप क्लिनिक के बारे में कोई जानकारी चाहते हैं?"
+      ],
+      "tools": [],
+      "errors": [],
+      "duration_seconds": 1.83,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S22",
+      "name": "Ambiguous date",
+      "status": "observed",
+      "input": [
+        "शुक्रवार को अपॉइंटमेंट चाहिए"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "उपलब्ध समय: Dr. Shah के 20 नवंबर 2026 को 14:30, Dr. Rao के 20 नवंबर 2026 को 14:30, Dr. Mehta के 20 नवंबर 2026 को 15:00. आपको कौन-सा समय उपयुक्त है?"
+      ],
+      "tools": [
+        "search_availability"
+      ],
+      "errors": [],
+      "duration_seconds": 2.67,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S23",
+      "name": "Fee then booking",
+      "status": "pass",
+      "input": [
+        "फी कितनी है? फिर अपॉइंटमेंट बुक करते हैं"
+      ],
+      "expected": [
+        "500"
+      ],
+      "matched": {
+        "500": true
+      },
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "परामर्श शुल्क: Dr. Mehta: 500, Dr. Patel: 700, Dr. Shah: 600, Dr. Rao: 800 रुपये."
+      ],
+      "tools": [
+        "get_fees"
+      ],
+      "errors": [],
+      "duration_seconds": 2.24,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    },
+    {
+      "id": "S24",
+      "name": "Correct a date",
+      "status": "observed",
+      "input": [
+        "कल बुक किया, नहीं शनिवार को कर दीजिए"
+      ],
+      "expected": [],
+      "matched": {},
+      "agent_replies": [
+        "नमस्ते, शर्मा क्लिनिक में आपका स्वागत है। यह कॉल गुणवत्ता और प्रशिक्षण के लिए रिकॉर्ड की जा सकती है। मैं आपकी क्या मदद कर सकता हूँ?",
+        "माफ़ी, मैं यह पुष्टि नहीं कर पा रहा। कृपया दोबारा कहें या मानव एजेंट से बात करें।"
+      ],
+      "tools": [
+        "reschedule_appointment"
+      ],
+      "errors": [],
+      "duration_seconds": 2.25,
+      "db_state": "none",
+      "evidence": "gateway WebSocket events"
+    }
+  ]
+}
