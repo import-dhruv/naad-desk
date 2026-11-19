@@ -29,3 +29,6 @@ recon/results/*.json
 .vercel
 
 -w
+
+*.db-shm
+*.db-wal
